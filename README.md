@@ -9,7 +9,7 @@
 
 ------------
 #### Experience
-2019-Present: --- **Junior Software Developer - Consultant - Freelance**
+2019-Present: $~~~~~$ **Junior Software Developer - Consultant - Freelance**
 - **Team Lead** - Ambient Noise, a mobile audio touring application developed for Zillow.
 	[website](https://www.github.com/jlsnow301/ambient-noise "website")
 -- Built for mobile using React Native, Expo, NodeJS.
