@@ -10,21 +10,17 @@
 ------------
 #### Experience
 2019-Present: **Junior Software Developer - Consultant** @ Freelance
-- **Team Lead** - Ambient Noise, a mobile audio touring application developed for Zillow.
-	- [website](https://www.github.com/jlsnow301/ambient-noise "website")
+- **Team Lead** - Ambient Noise, a mobile audio touring application developed for Zillow - [website](https://www.github.com/jlsnow301/ambient-noise "website")
 	- Built for mobile using React Native, Expo, NodeJS.
 	- Integrated secure cloud hosting with Google Firebase.
-- **Team Lead, UI** - NSC:AD410 Serverless Artillery, automated serverless testing project.
-	- [website](https://github.com/North-Seattle-College/ad440-winter2021-tuesday-repo/ "website")
+- **Team Lead, UI** - NSC:AD410 Serverless Artillery, automated serverless testing project - [website](https://github.com/North-Seattle-College/ad440-winter2021-tuesday-repo/ "website")
 	- Built using serverless and artillery frameworks.
 	- Developed front end UI suing React and NodeJS.
-- **Head Dev** - Inventory Tracker, a web application for scalable, robust inventory logging.
-	- [website](https://github.com/jlsnow301/inventory-tracker "website")
+- **Head Dev** - Inventory Tracker, a web application for scalable, robust inventory logging - [website](https://github.com/jlsnow301/inventory-tracker "website")
 	- Built using modern TypeScript React with ES6, hooks.
 	- Backend built in Deno, an alternative runtime to Node.
-- **Developer** - Financier, a fintech web application utilizing the Plaid API.
-	- [website](https://github.com/philckim/cuddly-octo-doodle "website")
-	- Built fully in MongoDB / Express / React / NodeJS.
+- **Developer** - Financier, a fintech web application utilizing the Plaid API. - [website](https://github.com/philckim/cuddly-octo-doodle "website")
+	- Built in MongoDB / Express / React / NodeJS.
 	- Implemented a proprietary algorithm to calculate financial risk based on income.
 
 2015-2018: **Software Repair Technician** @ Multiple Locations
