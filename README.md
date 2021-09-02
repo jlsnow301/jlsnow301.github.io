@@ -9,9 +9,7 @@
 
 ------------
 #### Experience
-2019-Present
-
-**Junior Software Developer - Consultant - Freelance**
+2019-Present: --- **Junior Software Developer - Consultant - Freelance**
 - **Team Lead** - Ambient Noise, a mobile audio touring application developed for Zillow.
 	[website](https://www.github.com/jlsnow301/ambient-noise "website")
 -- Built for mobile using React Native, Expo, NodeJS.
@@ -34,12 +32,11 @@
 -- Built new interfaces and management protocols that were well received.
 
 2015-2018
-
-**Software Repair Technician** -- Multiple Locations
--- Developed a Windows script to automate repair and backup workflows.
--- Cross trained employees in software and hardware repair, greatly increasing store ticket capacity.
--- Worked closely with local government offices and hospitals to troubleshoot and build robust, modern networks.
--- Managed an extensive recycling program that repaired and refurbished electronics.
+**Software Repair Technician** - Multiple Locations
+- Developed a Windows script to automate repair and backup workflows.
+- Cross trained employees in software and hardware repair, greatly increasing store ticket capacity.
+- Worked closely with local government offices and hospitals to troubleshoot and build robust, modern networks.
+- Managed an extensive recycling program that repaired and refurbished electronics.
 
 ------------
 **Education**
