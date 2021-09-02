@@ -1,5 +1,5 @@
 ### Jeremiah Snow
-206-379-0109 • jlsnow.301@gmail.com • [github.com/jlsnow301](https://www.github.com/jlsnow.301 "github.com/jlsnow301") •  [linkedin.com/in/jeremiahsnow301](https://linkedin.com/in/jeremiahsnow301 "linkedin.com/in/jeremiahsnow301")
+206-379-0109 • jlsnow.301@gmail.com • [github.com/jlsnow301](https://www.github.com/jlsnow301 "github.com/jlsnow301") •  [linkedin.com/in/jeremiahsnow301](https://linkedin.com/in/jeremiahsnow301 "linkedin.com/in/jeremiahsnow301")
 
 ------------
 #### Skills
