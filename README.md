@@ -13,24 +13,24 @@
 **Junior Software Developer - Consultant - Freelance**
 - **Team Lead** - Ambient Noise, a mobile audio touring application developed for Zillow.
 	[website](https://www.github.com/jlsnow301/ambient-noise "website")
--- Built for mobile using React Native, Expo, NodeJS.
--- Integrated secure cloud hosting with Google Firebase.
+	1 Built for mobile using React Native, Expo, NodeJS.
+	2 Integrated secure cloud hosting with Google Firebase.
 - **Team Lead, UI** - NSC:AD410 Serverless Artillery, automated serverless testing project.
 [website](https://github.com/North-Seattle-College/ad440-winter2021-tuesday-repo/ "website")
--- Built using serverless and artillery frameworks.
--- Developed front end UI suing React and NodeJS.
+	1 Built using serverless and artillery frameworks.
+	2 Developed front end UI suing React and NodeJS.
 - **Head Dev** - Inventory Tracker, a web application for scalable, robust inventory logging.
 [website](https://github.com/jlsnow301/inventory-tracker "website")
--- Built using modern TypeScript React with ES6, hooks.
--- Backend built in Deno, an alternative runtime to Node.
+	1 Built using modern TypeScript React with ES6, hooks.
+	2 Backend built in Deno, an alternative runtime to Node.
 - **Developer** - Financier, a fintech web application utilizing the Plaid API.
 [website](https://github.com/philckim/cuddly-octo-doodle "website")
--- Built fully in MongoDB / Express / React / NodeJS.
--- Implemented a proprietary algorithm to calculate financial risk based on income.
+	1 Built fully in MongoDB / Express / React / NodeJS.
+	2 Implemented a proprietary algorithm to calculate financial risk based on income.
 - **Contributor** - TGStation, a long running, highly rated (#15/all) open sourced game.
 [website](https://github.com/tgstation/tgstation "site")
--- Developed alongside in industry professionals in a highly curated environment.
--- Built new interfaces and management protocols that were well received.
+	1 Developed alongside in industry professionals in a highly curated environment.
+	2 Built new interfaces and management protocols that were well received.
 
 2015-2018<br/>
 **Software Repair Technician** - Multiple Locations
