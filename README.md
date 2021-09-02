@@ -12,9 +12,9 @@
 2019-Present<br/>
 **Junior Software Developer - Consultant - Freelance**
 - **Team Lead** - Ambient Noise, a mobile audio touring application developed for Zillow.
-	>[website](https://www.github.com/jlsnow301/ambient-noise "website")<br/>
-	>Built for mobile using React Native, Expo, NodeJS.<br/>
-	>Integrated secure cloud hosting with Google Firebase.
+	- [website](https://www.github.com/jlsnow301/ambient-noise "website")<br/>
+	- Built for mobile using React Native, Expo, NodeJS.<br/>
+	- Integrated secure cloud hosting with Google Firebase.
 - **Team Lead, UI** - NSC:AD410 Serverless Artillery, automated serverless testing project.
 [website](https://github.com/North-Seattle-College/ad440-winter2021-tuesday-repo/ "website")
 	1 Built using serverless and artillery frameworks.
