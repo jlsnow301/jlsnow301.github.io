@@ -34,10 +34,10 @@
 
 2015-2018<br/>
 **Software Repair Technician** - Multiple Locations
-	- Developed a Windows script to automate repair and backup workflows.
-	- Cross trained employees in software and hardware repair, greatly increasing store ticket capacity.
-	- Worked closely with local government offices and hospitals to troubleshoot and build robust, modern networks.
-	- Managed an extensive recycling program that repaired and refurbished electronics.
+- Developed a Windows script to automate repair and backup workflows.
+- Cross trained employees in software and hardware repair, greatly increasing store ticket capacity.
+- Worked closely with local government offices and hospitals to troubleshoot and build robust, modern networks.
+- Managed an extensive recycling program that repaired and refurbished electronics.
 
 ------------
 **Education**
