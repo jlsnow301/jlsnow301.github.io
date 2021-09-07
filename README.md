@@ -15,7 +15,7 @@
 	- Integrated secure cloud hosting with Google Firebase.
 - **Team Lead, UI** - NSC:AD410 Serverless Artillery, automated serverless testing project - [website](https://github.com/North-Seattle-College/ad440-winter2021-tuesday-repo/ "github.com/North-Seattle-College/ad440-winter2021-tuesday-repo")
 	- Built using serverless and artillery frameworks.
-	- Developed front end UI suing React and NodeJS.
+	- Developed front end UI using React and NodeJS.
 - **Head Dev** - Inventory Tracker, a web application for scalable, robust inventory logging - [website](https://github.com/jlsnow301/inventory-tracker "github.com/jlsnow301/inventory-tracker")
 	- Built using modern TypeScript React with ES6, hooks.
 	- Backend built in Deno, an alternative runtime to Node.
