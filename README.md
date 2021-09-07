@@ -4,8 +4,9 @@
 ------------
 #### Skills
 - Languages: JavaScript, TypeScript, Python, Java
-- Frameworks / Libraries: React, React Native, Node, MongoDB, Express, Deno
+- Frameworks / Libraries: React, React Native, Node, MongoDB, Express, Deno, Expo
 - Cloud Services: AWS, Azure, Firebase, GitHub, Google Cloud Platform
+- Systems: Windows, Mac, Linux, Android, iOS
 
 ------------
 #### Experience
@@ -31,6 +32,6 @@
 
 ------------
 **Education**
-- 2019 – Present (Graduation Date 06/2021) | North Seattle College | Computer Science BAS
-- 2016 – 2018 (Graduation Date 06/2018) | Belmont College, OH | Computer Networking AAS
+- 2019 – 2021 | Computer Science BAS | North Seattle College | Graduated 07/2021 
+- 2016 – 2018 | Computer Networking AAS | Belmont College, OH | Graduated 06/2018
 
