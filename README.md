@@ -20,7 +20,7 @@
 - **Project Lead** - Inventory Tracker, a web application for scalable, robust inventory logging - [website](https://github.com/jlsnow301/inventory-tracker "github.com/jlsnow301/inventory-tracker")
 	- Built using modern TypeScript React with ES6, hooks.
 	- Backend built in Deno, an alternative runtime to Node.
-- **React Developer** - Financier, a fintech web application utilizing the Plaid API - [website](https://github.com/philckim/Financier "github.com/philckim/financier")
+- **Full Stack Developer** - Financier, a fintech web application utilizing the Plaid API - [website](https://github.com/philckim/Financier "github.com/philckim/financier")
 	- Built in MongoDB / Express / React / NodeJS.
 	- Implemented a proprietary algorithm to calculate financial risk based on income.
 
