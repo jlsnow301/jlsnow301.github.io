@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className="page">
       <head>
-        <title>Resume Page</title>
+        <title>Resume - Jeremiah S</title>
         <link rel="stylesheet" href="../style/index.css" />
       </head>
       <p className="logo">
@@ -37,7 +37,7 @@ const Home = () => {
           Download Resume - PDF
         </a>
       </p>
-      <p className="copyinfo">Built by Aleph.js in Deno {version}</p>
+      <p className="copyinfo">Built using Aleph.js in Deno {version}</p>
     </div>
   );
 };
