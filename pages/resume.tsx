@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className="page">
       <head>
-        <title>Resume Page</title>
+        <title>Resume - Jeremiah S</title>
         <link rel="stylesheet" href="../style/resume.css" />
       </head>
       <p className="logo">
