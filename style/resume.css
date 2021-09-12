@@ -1,0 +1,77 @@
+* {
+  margin: 0 1rem 1rem 1rem;
+  padding: 0;
+  border: none;
+  outline: none;
+  font: x-large;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: #202040;
+  color: #ffbd69;
+}
+.page h1 {
+  margin: 0 0 0.2rem 0;
+  line-height: 1.5;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+}
+
+.page h1 strong {
+  font-weight: 700;
+}
+
+.page .logo {
+  margin: 0 0 -1rem -1rem;
+  padding: 0;
+}
+
+.page h2 {
+  margin: 0 0 0.2rem 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.page h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.page b {
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+}
+
+.page li {
+  margin: 0.5rem 0 0 0;
+}
+
+.page .copyinfo {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #999;
+}
+
+.page .line {
+  border-top: 1.5px solid #ff6363;
+  height: 0;
+  margin: 1rem 0 1rem 0;
+  width: 100%;
+}
+
+.page .footer {
+  margin: 5rem 0 0 0;
+}
+
+.page .button {
+  border: 2px solid #543864;
+  border-radius: 10px;
+  background-color: #543864;
+  color: #fff;
+  padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+}

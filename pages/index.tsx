@@ -16,7 +16,27 @@ const Home = () => {
         <Logo />
       </p>
       <h1>Jeremiah Snow</h1>
-      <p className="links"></p>
+      <p className="links">
+        <a className="button" href="/resume">
+          View Resume - Browser
+        </a>
+        <a
+          className="button"
+          download="jeremiah_snow_resume.docx"
+          href="/jeremiah_snow_resume.docx"
+          target="_blank"
+          rel="noopener noreferrer">
+          Download Resume - DOCX
+        </a>
+        <a
+          className="button"
+          download="jeremiah_snow_resume.pdf"
+          href="/jeremiah_snow_resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer">
+          Download Resume - PDF
+        </a>
+      </p>
       <p className="copyinfo">Built by Aleph.js in Deno {version}</p>
     </div>
   );
