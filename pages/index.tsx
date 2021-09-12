@@ -37,7 +37,7 @@ const Home = () => {
           Download Resume - PDF
         </a>
       </p>
-      <p className="copyinfo">Built by Aleph.js in Deno {version}</p>
+      <p className="copyinfo">Built using Aleph.js in Deno {version}</p>
     </div>
   );
 };
