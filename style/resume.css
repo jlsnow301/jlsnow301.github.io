@@ -9,6 +9,10 @@
   color: #ffbd69;
 }
 
+.page {
+  font-size: large;
+}
+
 .page h1 {
   margin: 0 0 0.2rem 0;
   line-height: 1.5;
