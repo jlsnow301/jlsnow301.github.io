@@ -42,42 +42,9 @@ main {
   color: #333;
 }
 
-.logo + p {
-  margin-top: 6px;
-}
-
-.links span,
 .links a {
   display: flex;
-}
-
-.links span {
-  color: #999;
-}
-
-.links span::after {
-  content: "·";
-}
-
-.links a {
-  margin: 0 9px;
-  color: #666;
-  text-decoration: none;
-  transition: color 0.15s ease-in;
-}
-
-.links a:hover {
-  color: #000;
-}
-
-.page .copyinfo {
-  margin-top: 30px;
-  font-size: 14px;
-  color: #999;
-}
-
-.page .footer {
-  margin: 5rem 0 0 0;
+  flex-direction: column;
 }
 
 .page .button {
@@ -87,4 +54,16 @@ main {
   color: #fff;
   padding: 0.7rem 1.5rem 0.7rem 1.5rem;
   margin: 0 0 1rem 0;
+  text-decoration: none;
+  transition: color 0.15s ease-in;
+}
+
+.page .button:hover {
+  color: #000;
+}
+
+.page .copyinfo {
+  margin-top: 2rem;
+  font-size: 14px;
+  color: #999;
 }
