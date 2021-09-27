@@ -20,7 +20,7 @@ const Home = () => {
       linkedin.com/in/jeremiahsnow301
       <div className="line" />
       <h3>Skills</h3>
-      <b>Languages:</b> JavaScript, TypeScript, Java, Python, SQL
+      <b>Languages:</b> JavaScript, TypeScript, Java, Python, SQL, GoLang
       <br />
       <b>Frameworks:</b> React, React Native, Node, MongoDB, Express, Deno, Expo
       <br />
@@ -40,8 +40,8 @@ const Home = () => {
           testing project.
         </li>
         <li>
-          Project Lead - Inventory Tracker, a web application for scalalble,
-          robust inventory logging.
+          Full Stack Engineer - Inventory Tracker, a web application for
+          scalable inventory logging.
         </li>
         <li>
           Full Stack Engineer - Financier, a fintech web application utilizing
@@ -53,7 +53,7 @@ const Home = () => {
         </li>
       </ul>
       <h3>Experience</h3>
-      2015-2018: <b>Software Repair Technician</b> @ Multiple Locations
+      2015-2018: <b>IT Repair Technician</b> @ Multiple Locations
       <ul>
         <li>
           Developed a Windows script framework to automate repair and backup
