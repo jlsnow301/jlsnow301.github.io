@@ -1,3 +1,3 @@
-### Professional Details Page.
+## Professional Details Page.
 
-## Built with [React](https://reactjs.org) in [TypeScript](https://www.typescriptlang.org/). 
+### Built with [React](https://reactjs.org) in [TypeScript](https://www.typescriptlang.org/). 
