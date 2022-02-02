@@ -1,1 +1,0 @@
-(()=>{var s=Object.defineProperty;var l=o=>s(o,"__esModule",{value:!0});var a=(o,e)=>{l(o);for(var n in e)s(o,n,{get:e[n],enumerable:!0})};var t={};a(t,{default:()=>c});var{default:p}=__ALEPH__.pack["https://esm.sh/react@17.0.2"];function c({size:o=75}){return p.createElement("img",{src:"/logo.png",height:o,title:"Panda"})}__ALEPH__.pack["/components/logo.tsx"]=t;})();
