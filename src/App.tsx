@@ -1,5 +1,6 @@
 import { ModButton as Button } from "./components/elements/Button";
 import { Image } from "./components/elements/Image";
+import "./components/css/app.css";
 
 export const App = () => {
   return (
