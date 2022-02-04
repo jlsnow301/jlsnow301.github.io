@@ -5,7 +5,6 @@
   align-items: center;
   justify-content: center;
   font-family: "Fira Sans";
-  font-size: calc(6px + 2vmin);
   color: #ffffff;
   text-align: center;
 }
@@ -13,6 +12,20 @@
 .app__buttons {
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
+  margin: 1rem;
   font-size: 20px;
+}
+
+.app__activity {
+  position: absolute;
+  bottom: 1rem;
+  max-width: 75%;
+  width: 40rem;
+}
+
+.app__activity-text {
+  color: #ffbd69;
+  font-size: small;
+  margin-bottom: 0.5rem;
+  text-align: left; 
 }
