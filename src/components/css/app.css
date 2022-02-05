@@ -17,15 +17,15 @@
 }
 
 .app__activity {
-  position: absolute;
-  bottom: 1rem;
+  margin: 1rem;
+  margin-top: 3rem;
   max-width: 75%;
   width: 40rem;
 }
 
 .app__activity-text {
   color: #ffbd69;
-  font-size: small;
+  font-size: medium;
   margin-bottom: 0.5rem;
   text-align: left; 
 }
