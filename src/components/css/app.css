@@ -9,23 +9,29 @@
   text-align: center;
 }
 
-.app__buttons {
+.links {
   display: flex;
   flex-direction: column;
   margin: 1rem;
   font-size: 20px;
 }
 
-.app__activity {
+.activity {
   margin: 1rem;
   margin-top: 3rem;
   max-width: 75%;
   width: 40rem;
 }
 
-.app__activity-text {
+.activity-text {
   color: #ffbd69;
   font-size: medium;
   margin-bottom: 0.5rem;
-  text-align: left; 
+  text-align: left;
+}
+
+.image {
+  margin: 1rem;
+  max-width: 11rem;
+  max-height: 11rem;
 }
