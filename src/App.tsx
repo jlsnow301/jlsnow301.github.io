@@ -1,15 +1,13 @@
 import { GithubActivity } from "./components/GithubActivity";
-import { LinkButtons } from "./components/LinkButtons";
-
-import "./components/css/app.css";
+import { Links } from "./components/Links";
+import "./scss/app.scss";
 
 export const App = () => {
   return (
     <div className="app">
-      <img alt="logo" className="image" src="./logo-cropped.png" />
+      <img alt="logo" className="app-profile" src="./logo-cropped.png" />
       <h1>Jeremiah Snow</h1>
-      full stack web developer.
-      <LinkButtons />
+      <Links />
       <GithubActivity />
     </div>
   );

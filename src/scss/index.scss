@@ -1,0 +1,38 @@
+@use "sass:color";
+$background: #0d1117;
+$abyss: #3d1e92;
+$gold: #ffbd69;
+$lilac: #7b53d8;
+$midnight-blue: #1c0c5b;
+$neon-purple: #6932ff;
+$violet: #3d2c8d;
+
+body {
+  background: $background;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 97vh;
+  width: 100%;
+}
+
+h1 {
+  font-family: "Garamond", serif;
+  font-size: calc(20px + 3vmin);
+  font-weight: 300;
+  color: $gold;
+  text-align: center;
+  margin: 0.5rem;
+}
+
+h3 {
+  font-size: calc(8px + 2vmin);
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  margin: 0;
+}

@@ -1,0 +1,88 @@
+@use "sass:color";
+$background: #0a0e13;
+$abyss: #3d1e92;
+$gold: #ffbd69;
+$lilac: #7b53d8;
+$midnight-blue: #1c0c5b;
+$neon-purple: #6932ff;
+$violet: #3d2c8d;
+
+.button {
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  margin: 1.2rem;
+  position: relative;
+  text-decoration: none;
+  width: 19rem;
+  z-index: 0;
+}
+
+.button:after {
+  content: "";
+  background: $violet;
+  border-radius: 12px;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.button:before {
+  animation: glowing 30s linear infinite;
+  border-radius: 20px;
+  content: "";
+  background: linear-gradient(
+    45deg,
+    $neon-purple,
+    $violet,
+    $abyss,
+    $violet,
+    $abyss,
+    $midnight-blue,
+    $midnight-blue,
+    $abyss,
+    $violet,
+    $abyss,
+    $violet,
+    $neon-purple
+  );
+  background-size: 400%;
+  filter: blur(5px);
+  height: calc(100% + 20px);
+  left: -10px;
+  opacity: 0.3;
+  position: absolute;
+  transition: opacity 0.3s ease-in-out;
+  width: calc(100% + 20px);
+  z-index: -1;
+}
+
+.button:hover:after {
+  background: $neon-purple;
+  border: thin solid lighten($neon-purple, 10%);
+}
+.button:hover:before {
+  opacity: 0.7;
+}
+
+.button-text {
+  margin-left: 0.5rem;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
