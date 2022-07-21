@@ -4,6 +4,9 @@ import { Button } from "./Button";
 export const Links: React.FC = (props) => {
   return (
     <div className="links">
+      <Button icon="linkedin" to="https://www.linkedin.com/in/jlsnow301">
+        Contact me
+      </Button>
       <Button download icon="file-word" to="/jeremiah_snow_resume.docx">
         Resume.docx
       </Button>

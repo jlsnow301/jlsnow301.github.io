@@ -1,11 +1,6 @@
 @use "sass:color";
 $background: #0d1117;
-$abyss: #3d1e92;
 $gold: #ffbd69;
-$lilac: #7b53d8;
-$midnight-blue: #1c0c5b;
-$neon-purple: #6932ff;
-$violet: #3d2c8d;
 
 body {
   background: $background;
@@ -26,7 +21,7 @@ h1 {
   font-weight: 300;
   color: $gold;
   text-align: center;
-  margin: 0.5rem;
+  margin: 0.4rem;
 }
 
 h3 {

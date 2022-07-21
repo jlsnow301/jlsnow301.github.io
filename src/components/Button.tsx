@@ -1,6 +1,10 @@
 import React, { ReactNode } from "react";
-import { faFilePdf, faFileWord } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+  faBug,
+  faFilePdf,
+  faFileWord,
+} from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import "../scss/button.scss";
@@ -22,8 +26,14 @@ export const Button: React.FC<Props> = (props) => {
     case "file-word":
       targetIcon = faFileWord;
       break;
-    default:
+    case "linkedin":
+      targetIcon = faLinkedin;
+      break;
+    case "github":
       targetIcon = faGithub;
+      break;
+    default:
+      targetIcon = faBug;
   }
 
   return (
