@@ -6,12 +6,12 @@ $neon-purple: #6932ff;
 $violet: #3d2c8d;
 
 .button {
+  align-items: center;
   color: white;
   cursor: pointer;
   display: flex;
-  align-items: center;
-  justify-content: center;
   height: 2.6rem;
+  justify-content: center;
   margin: 1.5rem;
   position: relative;
   text-decoration: none;
@@ -52,12 +52,11 @@ $violet: #3d2c8d;
   );
   background-size: 400%;
   filter: blur(5px);
-  height: calc(100% + 15px);
-  left: -7px;
+  height: calc(100% + 20px);
   opacity: 0;
   position: absolute;
   transition: opacity 0.3s ease-in-out;
-  width: calc(100% + 15px);
+  width: calc(100% + 20px);
   z-index: -1;
 }
 
@@ -66,7 +65,7 @@ $violet: #3d2c8d;
   border: thin solid lighten($neon-purple, 10%);
 }
 .button:hover:before {
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .button-text {
