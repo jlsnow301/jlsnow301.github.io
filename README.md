@@ -1,3 +1,3 @@
 # Professional Details Page
 
-Built in Astro
+Built in [Astro](https://astro.build/) :rocket:
