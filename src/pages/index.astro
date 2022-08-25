@@ -1,12 +1,10 @@
 ---
-import { Image } from "@astrojs/image/components";
 import Layout from "../layouts/Layout.astro";
 import Button from "../components/Button.astro";
-import imageUrl from "../../public/logo.png";
 ---
 
 <Layout title="Resume - Jeremiah">
-	<Image class="image" src={imageUrl} width={200} />
+	<img class="image" src="./logo.png" />
 	<h1 class="text-gradient">Jeremiah Snow</h1>
 	<div class="links">
 		<Button
@@ -38,6 +36,10 @@ import imageUrl from "../../public/logo.png";
 			--name-gradient: linear-gradient(0deg, #ffbd69, #db8d27);
 		}
 
+		.image {
+			width: 12rem;
+			max-width: 20%;
+		}
 		.text-gradient {
 			font-weight: 900;
 			background-image: var(--name-gradient);
@@ -63,7 +65,6 @@ import imageUrl from "../../public/logo.png";
 			display: flex;
 			flex-direction: column;
 			font-size: 20px;
-			padding: 1rem;
 		}
 	</style>
 </Layout>
