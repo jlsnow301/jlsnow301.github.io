@@ -2,12 +2,11 @@
 import { Image } from "@astrojs/image/components";
 import Layout from "../layouts/Layout.astro";
 import Button from "../components/Button.astro";
-import avatar from "../../public/logo-cropped.png";
+import imageUrl from "../../public/logo.png";
 ---
 
 <Layout title="Resume - Jeremiah">
-	<Image class="image" src={avatar} width={200} />
-
+	<Image class="image" src={imageUrl} width={200} />
 	<h1 class="text-gradient">Jeremiah Snow</h1>
 	<div class="links">
 		<Button
