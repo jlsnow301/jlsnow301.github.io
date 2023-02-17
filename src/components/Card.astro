@@ -1,0 +1,21 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="mt-52 mr-24 -skew-x-8.5 skew-y-9 space-y-2 py-6 px-28">
+  <h1 class="text-center font-serif text-4xl font-extrabold text-gray-800">
+    {title}
+  </h1>
+  <h2 class="text-center font-serif text-2xl font-extrabold text-gray-800">
+    Software Engineer
+  </h2>
+  <hr class="border-gray-800" />
+
+  <p>
+    <slot />
+  </p>
+</div>

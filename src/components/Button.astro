@@ -1,133 +1,32 @@
 ---
 import { Icon } from "astro-icon";
 
+const NAME2ICON = {
+  linkedin: "fa-brands:linkedin",
+  word: "fa-solid:file-word",
+  pdf: "fa-solid:file-pdf",
+  github: "fa-brands:github",
+} as const;
+
 type Props = {
-	download?: boolean;
-	icon: string;
-	title: string;
-	to: string;
+  download?: boolean;
+  icon: keyof typeof NAME2ICON;
+  title: string;
+  to: string;
 };
 
 const { download, icon, title, to } = Astro.props as Props;
-
-const matchIcon = (icon: string) => {
-	switch (icon) {
-		case "linkedin":
-			return "fa-brands:linkedin";
-		case "word":
-			return "fa-solid:file-word";
-		case "pdf":
-			return "fa-solid:file-pdf";
-		case "github":
-			return "fa-brands:github";
-		default:
-			return "fa6-solid:bug";
-	}
-};
 ---
 
 <a
-	class="button"
-	download={download && to.slice(1)}
-	href={to}
-	rel="noopener noreferrer"
-	target="_blank"
+  class="text-semibold flex rounded-xl border-2 border-indigo-900 bg-indigo-800 p-2 text-white hover:border-indigo-800 hover:bg-indigo-700"
+  download={download && to.slice(1)}
+  href={to}
+  rel="noopener noreferrer"
+  target="_blank"
 >
-	<Icon name={matchIcon(icon)} />
-	<div class="button-text">{title}</div>
+  <div class="mx-8 flex flex-1 justify-center space-x-6">
+    <Icon name={NAME2ICON[icon]} width="1.3rem" />
+    <div class="text-xl">{title}</div>
+  </div>
 </a>
-
-<style>
-	:root {
-		--background: #0a0e13;
-		--abyss: #3d1e92;
-		--midnight-blue: #1c0c5b;
-		--neon-purple: #6932ff;
-		--violet: #4923b2;
-	}
-	[astro-icon] {
-		height: 1.5rem;
-	}
-	.button {
-		align-items: center;
-		color: white;
-		cursor: pointer;
-		display: flex;
-		height: 2.6rem;
-
-		justify-content: center;
-		margin: 1rem;
-		position: relative;
-		text-decoration: none;
-		width: 19rem;
-		z-index: 0;
-	}
-
-	.button:after {
-		content: "";
-		background: var(--violet);
-		border-radius: 12px;
-		height: 100%;
-		left: 0;
-		position: absolute;
-		top: 0;
-		width: 100%;
-		z-index: -1;
-	}
-
-	.button:hover:after {
-		background: var(--neon-purple);
-		border: thin solid var(--neon-purple, 5%);
-	}
-
-	.button-text {
-		margin-left: 0.8rem;
-	}
-
-	@keyframes glow {
-		0% {
-			background-position: 0 0;
-		}
-		50% {
-			background-position: 400% 0;
-		}
-		100% {
-			background-position: 0 0;
-		}
-	}
-
-	@media only screen and (min-device-width: 992px) {
-		.button:before {
-			animation: glow 30s linear infinite;
-			border-radius: 20px;
-			content: "";
-			background: linear-gradient(
-				45deg,
-				var(--neon-purple),
-				var(--violet),
-				var(--abyss),
-				var(--violet),
-				var(--abyss),
-				var(--midnight-blue),
-				var(--midnight-blue),
-				var(--abyss),
-				var(--violet),
-				var(--abyss),
-				var(--violet),
-				var(--neon-purple)
-			);
-			background-size: 400%;
-			filter: blur(5px);
-			height: calc(100% + 20px);
-			opacity: 0;
-			position: absolute;
-			transition: opacity 0.3s ease-in-out;
-			width: calc(100% + 20px);
-			z-index: -1;
-		}
-
-		.button:hover:before {
-			opacity: 0.7;
-		}
-	}
-</style>

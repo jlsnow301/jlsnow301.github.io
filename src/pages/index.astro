@@ -1,70 +1,34 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Resume - Jeremiah">
-  <img alt="Panda Logo" class="image" src="./logo.png" />
-  <h1 class="text-gradient">Jeremiah Snow</h1>
-  <div class="links">
-    <Button
-      to="https://www.linkedin.com/in/jlsnow301"
-      icon="linkedin"
-      title="Contact Me"
-    />
-    <Button
-      download
-      to="/jeremiah_snow_resume.docx"
-      icon="word"
-      title="Resume.docx"
-    />
-    <Button
-      download
-      to="/jeremiah_snow_resume.pdf"
-      icon="pdf"
-      title="Resume.pdf"
-    />
-    <Button
-      to="https://www.github.com/jlsnow301"
-      icon="github"
-      title="View GitHub"
-    />
-  </div>
-
-  <style>
-    :root {
-      --name-gradient: linear-gradient(0deg, #ffbd69, #db8d27);
-    }
-
-    .image {
-      width: 12rem;
-      max-width: 20%;
-    }
-    .text-gradient {
-      font-weight: 900;
-      background-image: var(--name-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-size: 100% 200%;
-      background-position-y: 100%;
-      border-radius: 0.4rem;
-      animation: pulse 4s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-      0%,
-      100% {
-        background-position-y: 0%;
-      }
-      50% {
-        background-position-y: 80%;
-      }
-    }
-
-    .links {
-      display: flex;
-      flex-direction: column;
-      font-size: 20px;
-    }
-  </style>
+<Layout>
+  <Card title="Jeremiah Snow">
+    <div class="space-y-2">
+      <Button
+        to="https://www.linkedin.com/in/jlsnow301"
+        icon="linkedin"
+        title="Contact Me"
+      />
+      <Button
+        download
+        to="/jeremiah_snow_resume.docx"
+        icon="word"
+        title="Resume.docx"
+      />
+      <Button
+        download
+        to="/jeremiah_snow_resume.pdf"
+        icon="pdf"
+        title="Resume.pdf"
+      />
+      <Button
+        to="https://www.github.com/jlsnow301"
+        icon="github"
+        title="View GitHub"
+      />
+    </div>
+  </Card>
 </Layout>

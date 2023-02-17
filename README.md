@@ -1,3 +1,5 @@
-# Professional Details Page
+# Simple portfolio page
 
-Built in [Astro](https://astro.build/) :rocket:
+Check my resume and LinkedIn.
+
+Built with Astro and TailwindCSS.

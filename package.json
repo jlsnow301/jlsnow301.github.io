@@ -1,22 +1,20 @@
 {
-  "name": "@example/basics",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "devDependencies": {
-    "@astrojs/react": "^1.2.2",
-    "@astrojs/tailwind": "^2.1.1",
-    "astro": "^1.6.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "dependencies": {
-    "astro-icon": "^0.8.0"
-  }
+	"name": "steadfast-telescope",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/tailwind": "^3.0.1",
+		"astro": "^2.0.4",
+		"astro-icon": "^0.8.0",
+		"prettier": "^2.8.4",
+		"prettier-plugin-tailwindcss": "^0.2.3",
+		"tailwindcss": "^3.0.24"
+	}
 }
