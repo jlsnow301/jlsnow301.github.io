@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "jeremiahs-card": "url('/bg.jpg')",
+        "jeremiahs-card": "url('/bg.webp')",
       },
       skew: {
         9.1: "9.1deg",
