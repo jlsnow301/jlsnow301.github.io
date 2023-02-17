@@ -7,9 +7,7 @@ module.exports = {
         "jeremiahs-card": "url('/bg.jpg')",
       },
       skew: {
-        8: "8deg",
-        8.5: "8.5deg",
-        9: "9deg",
+        9.1: "9.1deg",
       },
     },
     fontFamily: {
