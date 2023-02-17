@@ -1,5 +1,5 @@
 # Simple portfolio page
 
-Check my resume and LinkedIn.
+Let's see Jeremiah's business card.
 
 Built with Astro and TailwindCSS.
