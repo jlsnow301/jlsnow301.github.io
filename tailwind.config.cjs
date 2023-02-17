@@ -11,7 +11,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      serif: ["Copperplate gothic"],
+      copperplate: ["Balthazar", "serif"],
     },
   },
   plugins: [],
