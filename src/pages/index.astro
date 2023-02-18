@@ -5,24 +5,26 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <Card title="JEREMIAH SNOW">
+  <Card name="JEREMIAH SNOW" title="SOFTWARE DEVELOPER">
     <Button
       to="https://www.linkedin.com/in/jlsnow301"
       icon="linkedin"
       title="Contact Me"
     />
-    <Button
-      download
-      to="/jeremiah_snow_resume.docx"
-      icon="word"
-      title="Resume.docx"
-    />
-    <Button
-      download
-      to="/jeremiah_snow_resume.pdf"
-      icon="pdf"
-      title="Resume.pdf"
-    />
+    <div class="hidden md:flex md:flex-col md:space-y-2">
+      <Button
+        download
+        to="/jeremiah_snow_resume.docx"
+        icon="word"
+        title="Resume.docx"
+      />
+      <Button
+        download
+        to="/jeremiah_snow_resume.pdf"
+        icon="pdf"
+        title="Resume.pdf"
+      />
+    </div>
     <Button
       to="https://www.github.com/jlsnow301"
       icon="github"

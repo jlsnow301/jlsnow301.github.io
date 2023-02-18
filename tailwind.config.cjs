@@ -5,6 +5,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         "jeremiahs-card": "url('/bg.webp')",
+        "closeup-card": "url('/card.webp')",
+        "sm-bg": "url('/sm-bg.webp')",
       },
       skew: {
         9.1: "9.1deg",
