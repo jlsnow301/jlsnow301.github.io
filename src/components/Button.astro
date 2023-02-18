@@ -25,8 +25,8 @@ const { download, icon, title, to } = Astro.props as Props;
   rel="noopener noreferrer"
   target="_blank"
 >
-  <div class="mx-8 flex flex-1 justify-center space-x-6">
-    <Icon name={NAME2ICON[icon]} width="1.3rem" />
-    <div class="text-xl">{title}</div>
+  <div class="flex flex-1 justify-center space-x-4 md:mx-8 md:space-x-6">
+    <Icon class="w-4 md:w-5" name={NAME2ICON[icon]} />
+    <div class="text-md md:text-xl">{title}</div>
   </div>
 </a>

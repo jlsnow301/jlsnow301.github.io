@@ -12,17 +12,17 @@ const { name, title } = Astro.props;
 >
   <div class="mb-2 mt-8">
     <h1
-      class="text-center font-copperplate text-2xl font-semibold text-gray-900 md:text-4xl"
+      class="text-center font-copperplate text-xl font-semibold text-gray-900 md:text-4xl"
     >
       {name}
     </h1>
     <h2
-      class="text-md text-center font-copperplate font-bold text-gray-900 md:text-2xl"
+      class="hidden text-center font-copperplate text-sm font-bold text-gray-900 md:flex md:text-2xl"
     >
       {title}
     </h2>
 
-    <hr class="border-gray-800" />
+    <hr class="hidden border-gray-800 md:flex" />
   </div>
 
   <div class="space-y-2">
