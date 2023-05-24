@@ -1,16 +1,18 @@
 {
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "My Task",
-      "command": "yarn astro dev",
+      "label": "Build and run",
+      "detail": "Start the frontend application",
       "type": "shell",
-      "args": [],
-      "problemMatcher": ["$tsc"],
-      "presentation": {
-        "reveal": "always"
-      },
-      "group": "build"
+      "command": "pnpm dev",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     }
   ]
 }

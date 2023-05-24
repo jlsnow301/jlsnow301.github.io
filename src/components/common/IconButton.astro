@@ -1,0 +1,35 @@
+---
+import { Icon } from 'astro-icon';
+
+type Props = {
+  link?: string;
+  icon: string;
+  download?: boolean;
+  tooltip: string;
+  size?: 'sm' | 'md' | 'lg';
+};
+
+const { download, link, icon, tooltip, size = 'md' } = Astro.props;
+
+const sizes = {
+  sm: 'w-8 h-8',
+  md: 'w-12 h-12',
+  lg: 'w-16 h-16',
+};
+---
+
+<div class="px-4 sm:w-1/2 lg:w-1/4">
+  <div class="group relative inline-block">
+    <a href={link} rel="noopener noreferrer" target="_blank" download={download && link?.slice(1)}>
+      <Icon class={`${sizes[size]} dark:bg-white dark:rounded-lg p-1`} name={icon} />
+    </a>
+    <div
+      class="border-light text-black absolute top-full left-1/2 z-20 mt-3 -translate-x-1/2 whitespace-nowrap rounded border bg-white py-[6px] px-4 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-all duration-150 dark:bg-dark dark:text-slate-300 dark:border-slate-800"
+    >
+      <span
+        class="border-light absolute -top-1 left-1/2 -z-10 h-2 w-2 -translate-x-1/2 rotate-45 rounded-sm border-t border-l bg-white dark:bg-dark dark:border-slate-800"
+      ></span>
+      {tooltip}
+    </div>
+  </div>
+</div>

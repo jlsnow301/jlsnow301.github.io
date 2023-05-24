@@ -1,0 +1,52 @@
+---
+import IconButton from '../common/IconButton.astro';
+
+interface Item {
+  title: string;
+  icon: string;
+}
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  highlight?: string;
+  items: Item[];
+}
+
+const { subtitle = await Astro.slots.render('subtitle'), highlight, items = [], title } = Astro.props;
+---
+
+<section class="scroll-mt-16" id="skills">
+  <div class="px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
+    {
+      (subtitle || highlight) && (
+        <div class="md:mx-auto text-center md:mb-12 max-w-3xl">
+          {highlight && (
+            <p
+              class="text-base text-primary dark:text-blue-200 font-semibold tracking-wide uppercase"
+              set:html={highlight}
+            />
+          )}
+
+          {title && (
+            <h2 class="mt-2 mb-6 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white sm:text-5xl md:mx-auto">
+              {title}
+            </h2>
+          )}
+          {subtitle && (
+            <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400" set:html={subtitle} />
+          )}
+        </div>
+      )
+    }
+    <div class="grid grid-cols-8 p-4 gap-4">
+      {
+        items.map(({ icon, title }) => (
+          <div class="flex flex-row max-w-md dark:text-white">
+            <IconButton icon={icon} tooltip={title} />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

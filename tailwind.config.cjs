@@ -1,20 +1,21 @@
-/** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: ['./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
-      backgroundImage: {
-        "jeremiahs-card": "url('/bg.webp')",
-        "closeup-card": "url('/card.webp')",
-        "sm-bg": "url('/sm-bg.webp')",
+      colors: {
+        primary: 'var(--aw-color-primary)',
+        secondary: 'var(--aw-color-secondary)',
+        accent: 'var(--aw-color-accent)',
       },
-      skew: {
-        9.1: "9.1deg",
+      fontFamily: {
+        sans: ['var(--aw-font-sans)', ...defaultTheme.fontFamily.sans],
+        serif: ['var(--aw-font-serif)', ...defaultTheme.fontFamily.serif],
+        heading: ['var(--aw-font-heading)', ...defaultTheme.fontFamily.sans],
       },
-    },
-    fontFamily: {
-      copperplate: ["Balthazar", "serif"],
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
+  darkMode: 'class',
 };
