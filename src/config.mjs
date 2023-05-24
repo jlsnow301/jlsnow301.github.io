@@ -3,7 +3,7 @@ import defaultImage from './assets/images/default.png';
 const CONFIG = {
   name: 'Portfolio - Jeremiah S',
 
-  origin: 'https://github.io/jlsnow301/jlsnow301.github.io',
+  origin: 'https://jlsnow301.github.io/',
   basePathname: '/',
   trailingSlash: false,
 
