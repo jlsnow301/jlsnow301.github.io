@@ -24,16 +24,16 @@ const meta = {
   <Hero
     callToAction={{ text: 'Get resume', href: '/jeremiah_snow_resume.pdf', icon: 'tabler:download' }}
     callToAction2={{ text: 'Learn more', href: '#skills' }}
-    image={{ src: '/fantasy-planet.jpg', alt: 'Hero Image' }}
+    image={{ src: import('~/assets/images/fantasy-planet.jpg'), alt: 'Hero Image' }}
   >
     <Fragment slot="title">Hey there.</Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
+      <span class="sm:inline">
         I'm Jeremiah, a software engineer in Seattle, Washington. I'm currently working as a full stack engineer at <a
           class="dark:text-accent"
           href="https://paretocyber.com">Pareto Cyber.</a
-        > I am also a maintainer of an open source game, <a
+        > I am also a maintainer of a large open source game, <a
           class="dark:text-accent"
           href="https://www.github.com/tgstation/tgstation">TG Station.</a
         >
@@ -51,7 +51,7 @@ const meta = {
   <Skills
     highlight="Skills"
     title="My tech stack"
-    subtitle="I try to stay recent with all developments in tech, but I have a few favorites. I learn through experimentation, and trying new tech keeps me engaged."
+    subtitle="I try to stay recent with all developments in tech, but I have a few favorites. I learn through experimentation, and trying new tech keeps me engaged.  I prefer strong type safety systems and functional programming. My primary language is TypeScript, I work with it every day."
     items={[
       { icon: 'logos:typescript-icon', title: 'Typescript' },
       { icon: 'logos:javascript', title: 'Javascript' },
@@ -154,7 +154,7 @@ const meta = {
       },
     ]}
     image={{
-      src: '/tgstation.jpg',
+      src: import('~/assets/images/tgstation.jpg'),
       alt: 'TG Station',
     }}
   >
@@ -168,7 +168,7 @@ const meta = {
   <Content
     isReversed
     image={{
-      src: '/pareto-ui.png',
+      src: import('~/assets/images/pareto-ui.png'),
       alt: 'Pareto Cyber',
     }}
     items={[

@@ -5,7 +5,7 @@ import { Picture } from '@astrojs/image/components';
 <div class="flex">
   <Picture
     alt="Panda Logo"
-    src="/logo-small.png"
+    src={import('~/assets/images/logo-small.png')}
     width={35}
     height={35}
     widths={[400, 768]}

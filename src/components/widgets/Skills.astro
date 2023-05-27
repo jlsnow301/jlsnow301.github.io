@@ -39,14 +39,25 @@ const { subtitle = await Astro.slots.render('subtitle'), highlight, items = [], 
         </div>
       )
     }
-    <div class="grid grid-cols-8 p-4 gap-4">
-      {
-        items.map(({ icon, title }) => (
-          <div class="flex flex-row max-w-md dark:text-white">
-            <IconButton icon={icon} tooltip={title} />
-          </div>
-        ))
-      }
+    <div class="relative overflow-x-hidden flex group">
+      <div class="py-12 animate-marquee whitespace-nowrap flex group-hover:pause">
+        {
+          items.map(({ icon, title }) => (
+            <div class="mx-2">
+              <IconButton icon={icon} tooltip={title} />
+            </div>
+          ))
+        }
+      </div>
+      <div class="absolute py-12 animate-marquee2 whitespace-nowrap flex group-hover:pause">
+        {
+          items.map(({ icon, title }) => (
+            <div class="mx-2">
+              <IconButton icon={icon} tooltip={title} />
+            </div>
+          ))
+        }
+      </div>
     </div>
   </div>
 </section>
