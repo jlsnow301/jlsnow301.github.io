@@ -4,10 +4,8 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
 
 import Content from '~/components/widgets/Content.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
 import Stars from '~/components/widgets/Stars.astro';
 import Skills from '~/components/widgets/Skills.astro';
 
@@ -30,14 +28,11 @@ const meta = {
 
     <Fragment slot="subtitle">
       <span class="sm:inline">
-        I'm Jeremiah, a software engineer in Seattle, Washington. I'm currently working as a full stack engineer at <a
+        I'm Jeremiah, a software engineer in Seattle, Washington. I'm a UI maintainer at <a
           class="dark:text-accent"
-          href="https://paretocyber.com">Pareto Cyber.</a
-        > I am also a maintainer of a large open source game, <a
-          class="dark:text-accent"
-          href="https://www.github.com/tgstation/tgstation">TG Station.</a
+          href="https://www.github.com/tgstation/tgstation">TG Station</a
         >
-        <Stars />
+        <Stars />, one of the world's most active software repositories.
       </span>
     </Fragment>
   </Hero>
@@ -51,7 +46,7 @@ const meta = {
   <Skills
     highlight="Skills"
     title="My tech stack"
-    subtitle="I try to stay recent with all developments in tech, but I have a few favorites. I learn through experimentation, and trying new tech keeps me engaged.  I prefer strong type safety systems and functional programming. My primary language is TypeScript, I work with it every day."
+    subtitle='I like to stay active in open source and stay updated by following content creators that discuss new technologies. I am always searching to improve my skills. My primary language is TypeScript, but am interested in moving to other languages like Rust and Zig.'
     items={[
       { icon: 'logos:typescript-icon', title: 'Typescript' },
       { icon: 'logos:javascript', title: 'Javascript' },
@@ -84,52 +79,6 @@ const meta = {
     ]}
   />
 
-  <Features
-    highlight="about"
-    title="What I bring to the table"
-    subtitle="Sure, I can work with x or y. But how do I do things?"
-    items={[
-      [
-        {
-          title: 'Code as a Hobby',
-          description: "I love to program software. It's an escape for me, so I don't mind doing it in my free time.",
-          icon: 'tabler:coffee',
-        },
-        {
-          title: 'Accessibility',
-          description:
-            'Writing code that is accessible is important to me. I try to make sure that my code is readable by everyone.',
-          icon: 'tabler:accessible',
-        },
-        {
-          title: 'Best Practices',
-          description:
-            'I stay very recent with technology, and I try to use the best practices for the language I am using.',
-          icon: 'tabler:list-check',
-        },
-      ],
-      [
-        {
-          title: 'Excellent Page Speed',
-          description: 'I enjoy ratcheting performance to the max. Lighthouse scores are a great way to measure this.',
-          icon: 'tabler:rocket',
-        },
-        {
-          title: 'Reusable Components',
-          description:
-            'I love to build tools and components that streamline processes. Line deletions are my favorite metric.',
-          icon: 'tabler:components',
-        },
-        {
-          title: 'Open to new ideas and contributions',
-          description:
-            'The forefront of technology has no reserve for the stubborn. I am always open to new ideas and contributions.',
-          icon: 'tabler:bulb',
-        },
-      ],
-    ]}
-  />
-
   <!-- Content Widget **************** -->
 
   <Content
@@ -145,13 +94,18 @@ const meta = {
       {
         title: 'Issue Triage',
         description:
-          "Tracked down bugs in the UI and fixed issues. When I couldn't fix it alone, I provided detailed feedback and reproducible steps for other contributors.",
+          "Tracked down bugs and fixed issues. When I couldn't fix it alone, I provided detailed feedback and reproducible steps for other contributors.",
       },
       {
         title: 'Code Reviews',
         description:
           'Helped review and merge pull requests from other contributors. Reviewed code for best practices and readability.',
       },
+      {
+        title: 'Feature Implementation',
+        description:
+        'Built an entirely new gameplay route which sought to improve the experience for new and old players. This included a new UI and backend, encompassing tens of thousands of lines of code.'
+      }
     ]}
     image={{
       src: import('~/assets/images/tgstation.jpg'),
@@ -160,7 +114,7 @@ const meta = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">TG Station</h3>
-      Pixelated roleplaying game set on a paranoia-laden, nonsensical space station. The spiritual predecessor, and perhaps
+      Pixel-themed roleplaying game set on a paranoia-laden, nonsensical space station. The spiritual predecessor, and perhaps
       direct influence, to Among Us. I maintain the UI for this game, which is written in InfernoJS, a React-like framework.
     </Fragment>
   </Content>
@@ -175,39 +129,26 @@ const meta = {
       {
         title: 'Frontend: TypeScript React',
         description:
-          'I help build interfaces in React at the discretion of stakeholders. Implementing modern architecture and tools, I brought the application up 30 points in Lighthouse scores.',
+          'Built interfaces in React at the discretion of stakeholders. As I keep abreast of new technology, the architecture and tools I brought to the table increased our performance benchmarks (Lighthouse) ~70% while greatly improving the appearance of the application.',
       },
       {
         title: 'Backend: Go',
         description:
-          "I help build backend services in Go. I've built a few services from the ground up, and I've helped maintain existing services. I also restructured the codebase to be more maintainable.",
+          "Built backend services in Go, learning more of the simplistic language as I went. Worked on new and old features.",
       },
       {
         title: 'Infrastructure: AWS',
         description:
-          'I help maintain infrastructure of the application. I am working to improve the CI/CD pipeline and reduce costs by removing unused resources.',
+          'Worked on improving logging and build times in AWS. I identified and sought to fix issues which caused slowdowns and outages.',
       },
     ]}
     title="Full Stack Engineer"
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Pareto Cyber</h3>
-      A managed security services provider. On a small dev team, I work on a variety of projects within the company that
-      composes their web application. I work on the frontend, backend, and infrastructure.
+      A managed security services provider. On a small dev team, I worked on a variety of projects within the company that
+      composes their internal web application. I was solely responsible for many work projects that ranged from adding new features to maintaining existing code.
     </Fragment>
   </Content>
 
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    callToAction={{
-      text: 'Get resume',
-      href: '/resume_jeremiah_snow.pdf',
-      icon: 'tabler:download',
-    }}
-  >
-    <Fragment slot="title">In case you missed it</Fragment>
-
-    <Fragment slot="subtitle">Happy to have you here. Let's work together some time.</Fragment>
-  </CallToAction>
 </Layout>

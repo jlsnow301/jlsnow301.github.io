@@ -5,10 +5,6 @@ export const headerData = {
       href: '#skills',
     },
     {
-      text: 'About',
-      href: '#about',
-    },
-    {
       text: 'Contributions',
       href: '#work',
     },
