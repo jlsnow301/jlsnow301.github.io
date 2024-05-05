@@ -1,0 +1,25 @@
+---
+import "@fontsource-variable/exo-2";
+---
+
+<!doctype html>
+<html lang="en" class="dark" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/avatar.png" type="image/png" />
+    <title>Resume.</title>
+  </head>
+  <body
+    class="flex flex-col gap-4 duration-700 transition-colors
+    dark:bg-zinc-950 dark:text-white"
+  >
+    <slot />
+  </body>
+</html>
+<style>
+  html {
+    font-family: "Exo 2 Variable", sans-serif;
+  }
+</style>

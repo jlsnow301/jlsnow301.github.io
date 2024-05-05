@@ -1,0 +1,22 @@
+---
+import { ThemeSwitch } from "astro-color-scheme";
+import { Icon } from "astro-icon/components";
+---
+
+<div class="self-end">
+  <ThemeSwitch strategy="button" defaultTheme="dark">
+    <button class="rounded-full p-1 shadow-md focus:outline-none focus:ring-0">
+      <span class="sr-only">Toggle Theme</span>
+      <Icon class="dark:hidden" name="heroicons:sun" />
+      <Icon class="hidden dark:block text-amber-400" name="heroicons:moon" />
+    </button>
+  </ThemeSwitch>
+</div>
+<script>
+  /// Theme toggle doesn't seem to like single clicks, so this is a workaround
+  const ourButton = document.querySelector("button");
+
+  ourButton?.addEventListener("click", () => {
+    ourButton?.click();
+  });
+</script>

@@ -1,0 +1,29 @@
+---
+import { Icon } from "astro-icon/components";
+
+type Props = {
+  to: string;
+} & Partial<{
+  icon: string;
+  download: string;
+}>;
+
+const { icon, to, download }: Props = Astro.props;
+---
+
+<div class="flex">
+  <a
+    download={download ? download : undefined}
+    target="_blank"
+    rel="noopener noreferrer"
+    href={to}
+    class="px-6 text-white border-2 flex min-w-48 transition-colors rounded-lg gap-2 items-center justify-center
+    border-blue-500 bg-blue-500 hover:bg-blue-600 hover:border-blue-600
+    dark:bg-rose-900 dark:border-rose-800 dark:hover:bg-rose-700 dark:hover:border-rose-700"
+  >
+    {icon && <Icon size={22} name={icon} />}
+    <h3 class="text-lg font-semibold">
+      <slot />
+    </h3>
+  </a>
+</div>

@@ -1,0 +1,39 @@
+---
+import { Icon } from "astro-icon/components";
+
+const skills = [
+  { icon: "typescript", name: "TypeScript" },
+  { icon: "golang", name: "Go" },
+  { icon: "rust", name: "Rust" },
+  { icon: "sass", name: "Sass" },
+  { icon: "docker", name: "Docker" },
+  { icon: "aws-dark", name: "AWS" },
+  { icon: "react-dark", name: "React" },
+  { icon: "tailwindcss-dark", name: "Tailwind CSS" },
+  { icon: "nodejs-dark", name: "Node.js" },
+  { icon: "postgresql-dark", name: "PostgreSQL" },
+  { icon: "github-dark", name: "GitHub" },
+  { icon: "supabase-dark", name: "Supabase" },
+  { icon: "python-dark", name: "Python" },
+  { icon: "azure-dark", name: "Azure" },
+  { icon: "webpack-dark", name: "Webpack" },
+];
+---
+
+<div class="flex gap-4 flex-wrap">
+  {
+    skills.map((skill) => (
+      <div class="relative group flex justify-center">
+        <Icon name={`skill-icons:${skill.icon}`} size={50} />
+        <div
+          class="absolute bottom-full mb-2 text-xs px-2 p-1 rounded-lg 
+          opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100
+          flex items-center justify-center whitespace-nowrap text-zinc-500 shadow-md
+          dark:bg-zinc-500 dark:text-white"
+        >
+          {skill.name}
+        </div>
+      </div>
+    ))
+  }
+</div>

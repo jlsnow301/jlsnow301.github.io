@@ -1,154 +1,71 @@
 ---
-import { SITE } from '~/config.mjs';
-import Layout from '~/layouts/PageLayout.astro';
-
-import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
-
-import Content from '~/components/widgets/Content.astro';
-import Stars from '~/components/widgets/Stars.astro';
-import Skills from '~/components/widgets/Skills.astro';
-
-const meta = {
-  title: SITE.title,
-  description: SITE.description,
-  dontUseTitleTemplate: true,
-};
+import Avatar from "../components/Avatar.astro";
+import Card from "../components/Card.astro";
+import Header from "../components/Header.astro";
+import Link from "../components/Link.astro";
+import Section from "../components/Section.astro";
+import SkillList from "../components/SkillList.astro";
+import Stars from "../components/Stars.astro";
+import ThemeToggle from "../components/ThemeToggle.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout {meta}>
-  <!-- Hero Widget ******************* -->
+<Layout>
+  <main class="flex flex-col flex-1">
+    <Header>
+      <Avatar />
+      <ThemeToggle />
+    </Header>
 
-  <Hero
-    callToAction={{ text: 'Get resume', href: '/resume_jeremiah_snow.pdf', icon: 'tabler:download' }}
-    callToAction2={{ text: 'Learn more', href: '#skills' }}
-    image={{ src: import('~/assets/images/fantasy-planet.jpg'), alt: 'Hero Image' }}
-  >
-    <Fragment slot="title">Hey there.</Fragment>
+    <div class="flex p-12 md:flex-row flex-col gap-8 justify-around">
+      <Card title="About">
+        <div class="flex flex-col justify-between flex-1 gap-4">
+          <p class="text-lg dark:font-light">
+            Hey there. I'm Jeremiah, or jlsnow301.
+            <br />
+            I'm full stack, game dev hobbyist, and maintainer @ TG <Stars />
+            <br /><br />
+            I'm a proponent of TypeScript. I enjoy teaching React. I never intended
+            to lean into web dev, but I'm highly opinionated, so here we are.
+          </p>
+          <div class="hidden md:block">
+            <SkillList />
+          </div>
+        </div>
+      </Card>
 
-    <Fragment slot="subtitle">
-      <span class="sm:inline">
-        I'm Jeremiah, a software engineer in Seattle, Washington. I'm a UI maintainer at <a
-          class="dark:text-accent"
-          href="https://www.github.com/tgstation/tgstation">TG Station</a
-        >
-        <Stars />, one of the world's most active software repositories.
-      </span>
-    </Fragment>
-  </Hero>
+      <div class="flex flex-col gap-4 items-center">
+        <div class="hidden md:block">
+          <Section title="Resume">
+            <Link
+              download="resume_jeremiah_snow.pdf"
+              to="/resume_jeremiah_snow.pdf"
+              icon="heroicons:document-arrow-down">PDF</Link
+            >
+          </Section>
+        </div>
 
-  <!-- Note Widget ******************* -->
+        <Section title="Projects">
+          <Link
+            to="https://github.com/tgstation/tgstation/pulls?q=is%3Apr+author%3Ajlsnow301+is%3Amerged"
+          >
+            TG Station
+          </Link>
+          <Link to="https://paretocyber.com/">Pareto Cyber</Link>
+          <Link to="https://github.com/jlsnow301/ambient-noise"
+            >Ambient Noise</Link
+          >
+        </Section>
 
-  <Note />
-
-  <!-- Features Widget *************** -->
-
-  <Skills
-    highlight="Skills"
-    title="My tech stack"
-    subtitle='I like to stay active in open source and stay updated by following content creators that discuss new technologies. I am always searching to improve my skills. My primary language is TypeScript, but am interested in moving to other languages like Rust and Zig.'
-    items={[
-      { icon: 'logos:typescript-icon', title: 'Typescript' },
-      { icon: 'logos:javascript', title: 'Javascript' },
-      { icon: 'logos:python', title: 'Python' },
-      { icon: 'logos:go', title: 'Go' },
-      { icon: 'vscode-icons:file-type-zig', title: 'Zig' },
-      { icon: 'logos:java', title: 'Java' },
-      { icon: 'logos:html-5', title: 'HTML' },
-      { icon: 'logos:css-3', title: 'CSS' },
-      { icon: 'logos:tailwindcss-icon', title: 'Tailwind' },
-      { icon: 'logos:sass', title: 'Sass' },
-      { icon: 'logos:react', title: 'React' },
-      { icon: 'logos:inferno', title: 'Inferno' },
-      { icon: 'logos:solidjs-icon', title: 'Solid' },
-      { icon: 'logos:nextjs-icon', title: 'Next.js' },
-      { icon: 'logos:astro', title: 'Astro' },
-      { icon: 'logos:expo', title: 'Expo' },
-      { icon: 'logos:vue', title: 'Vue' },
-      { icon: 'logos:deno', title: 'Deno' },
-      { icon: 'logos:nodejs', title: 'Node' },
-      { icon: 'logos:aws', title: 'AWS' },
-      { icon: 'vscode-icons:file-type-firebase', title: 'Firebase' },
-      { icon: 'logos:microsoft-azure', title: 'Azure' },
-      { icon: 'logos:github-icon', title: 'GitHub' },
-      { icon: 'logos:atlassian', title: 'Atlassian' },
-      { icon: 'logos:jira', title: 'Jira' },
-      { icon: 'logos:microsoft-windows', title: 'Windows' },
-      { icon: 'logos:linux-tux', title: 'Linux' },
-      { icon: 'logos:apple', title: 'MacOS' },
-    ]}
-  />
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    id="work"
-    highlight="My Contributions"
-    title="Open Source Maintainer"
-    items={[
-      {
-        title: 'TGUI Conversions',
-        description:
-          'Converted hundreds of dated user inputs into modern, sleek alternatives. Built in modern TypeScript and InfernoJS.',
-      },
-      {
-        title: 'Issue Triage',
-        description:
-          "Tracked down bugs and fixed issues. When I couldn't fix it alone, I provided detailed feedback and reproducible steps for other contributors.",
-      },
-      {
-        title: 'Code Reviews',
-        description:
-          'Helped review and merge pull requests from other contributors. Reviewed code for best practices and readability.',
-      },
-      {
-        title: 'Feature Implementation',
-        description:
-        'Built an entirely new gameplay route which sought to improve the experience for new and old players. This included a new UI and backend, encompassing tens of thousands of lines of code.'
-      }
-    ]}
-    image={{
-      src: import('~/assets/images/tgstation.jpg'),
-      alt: 'TG Station',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">TG Station</h3>
-      Pixel-themed roleplaying game set on a paranoia-laden, nonsensical space station. The spiritual predecessor, and perhaps
-      direct influence, to Among Us. I maintain the UI for this game, which is written in InfernoJS, a React-like framework.
-    </Fragment>
-  </Content>
-
-  <Content
-    isReversed
-    image={{
-      src: import('~/assets/images/pareto-ui.png'),
-      alt: 'Pareto Cyber',
-    }}
-    items={[
-      {
-        title: 'Frontend: TypeScript React',
-        description:
-          'Built interfaces in React at the discretion of stakeholders. As I keep abreast of new technology, the architecture and tools I brought to the table increased our performance benchmarks (Lighthouse) ~70% while greatly improving the appearance of the application.',
-      },
-      {
-        title: 'Backend: Go',
-        description:
-          "Built backend services in Go, learning more of the simplistic language as I went. Worked on new and old features.",
-      },
-      {
-        title: 'Infrastructure: AWS',
-        description:
-          'Worked on improving logging and build times in AWS. I identified and sought to fix issues which caused slowdowns and outages.',
-      },
-    ]}
-    title="Full Stack Engineer"
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Pareto Cyber</h3>
-      A managed security services provider. On a small dev team, I worked on a variety of projects within the company that
-      composes their internal web application. I was solely responsible for many work projects that ranged from adding new features to maintaining existing code.
-    </Fragment>
-  </Content>
-
+        <Section title="Contact">
+          <Link icon="mdi:linkedin" to="https://www.linkedin.com/in/jlsnow301/"
+            >LinkedIn</Link
+          >
+          <Link icon="mdi:github" to="https://www.github.com/jlsnow301/"
+            >GitHub</Link
+          >
+        </Section>
+      </div>
+    </div>
+  </main>
 </Layout>
