@@ -13,12 +13,16 @@ const { title }: Props = Astro.props;
   {
     title && (
       <div>
-        <h2 class="dark:text-zinc-200 text-2xl font-bold mb-4 ml-2">{title}</h2>
+        <h2 class="dark:text-zinc-200 text-2xl font-bold mb-4 ml-2 text-zinc-950">
+          {title}
+        </h2>
         <div class="border-b-2 border-zinc-100 dark:border-zinc-300" />
       </div>
     )
   }
   <div class="p-1 flex flex-1">
-    <slot />
+    <div class="flex flex-col justify-between flex-1 gap-4">
+      <slot />
+    </div>
   </div>
 </div>

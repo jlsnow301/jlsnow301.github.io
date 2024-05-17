@@ -17,21 +17,19 @@ import Layout from "../layouts/Layout.astro";
       <ThemeToggle />
     </Header>
 
-    <div class="flex p-12 md:flex-row flex-col gap-8 justify-around">
+    <div class="flex p-12 lg:flex-row flex-col gap-8 justify-around m-auto">
       <Card title="About">
-        <div class="flex flex-col justify-between flex-1 gap-4">
-          <p class="text-lg dark:font-light">
-            Hey there. I'm Jeremiah, or jlsnow301.
-            <br />
-            I'm full stack, game dev hobbyist, and maintainer @ TG <Stars />
-            <br /><br />
-            I'm a proponent of TypeScript. I enjoy teaching React. I enjoy simplicity
-            in UI design and software architecture.
-          </p>
-          <div class="hidden md:block">
-            <span class="text-xs text-zinc-500">Hover for skill details.</span>
-            <SkillList />
-          </div>
+        <p class="text-lg font-light">
+          Hey there. I'm Jeremiah, or jlsnow301.
+          <br />
+          I'm full stack, game dev hobbyist, and maintainer @ TG <Stars />
+          <br /><br />
+          I'm a proponent of TypeScript. I enjoy teaching React. I enjoy simplicity
+          in UI design and software architecture.
+        </p>
+        <div class="hidden lg:block">
+          <span class="text-xs text-zinc-500">Hover for skill details.</span>
+          <SkillList />
         </div>
       </Card>
 
