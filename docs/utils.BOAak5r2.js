@@ -1,4 +1,4 @@
-import{r as h}from"../_astro/index.l2PZgWEW.js";var te={exports:{}},W={};/**
+import{r as h}from"./index.l2PZgWEW.js";var te={exports:{}},W={};/**
  * @license React
  * react-jsx-runtime.production.min.js
  *
