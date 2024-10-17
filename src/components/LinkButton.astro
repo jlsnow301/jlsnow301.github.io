@@ -1,0 +1,22 @@
+---
+import { Button } from "@/components/ui/button";
+import { clsx } from "clsx";
+
+type Props = {
+  href: string;
+  className?: string;
+  square?: true;
+};
+
+const { className, href } = Astro.props;
+---
+
+<a href={href} target="_blank" rel="noopener noreferrer">
+  <Button
+    className={clsx(
+      "w-36 bg-blue-500 dark:bg-neutral-700 text-white dark:text-gray-200 hover:bg-blue-600 dark:hover:bg-neutral-600",
+      className,
+    )}
+    variant="secondary"><slot /></Button
+  >
+</a>

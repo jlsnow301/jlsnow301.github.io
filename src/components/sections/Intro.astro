@@ -1,0 +1,133 @@
+---
+import { ThemeToggle } from "@/components/theme-toggle";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import SkillList from "../SkillList.astro";
+import ContactButtons from "../ContactButtons.astro";
+---
+
+<div class="min-h-screen" id="intro">
+  <!-- Hero Section -->
+  <div
+    class="relative h-[25vh] bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"
+  >
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="absolute inset-0 flex items-center justify-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-white tracking-wider">
+        Welcome to My Portfolio
+      </h1>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 py-16">
+    <!-- Theme Toggle -->
+    <div class="flex justify-start mb-8 lg:justify-end lg:mb-4">
+      <ThemeToggle rectangle client:load />
+    </div>
+
+    <!-- About Me Section -->
+    <div
+      class="flex flex-col md:flex-row gap-8 items-center justify-center mb-16"
+    >
+      <div class="flex gap-8 items-center h-[260px]">
+        <Card
+          className="w-full md:w-2/3 lg:w-1/2 shadow-lg hover:shadow-xl transition-shadow duration-300"
+        >
+          <CardHeader>
+            <CardTitle
+              className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text"
+              >About Me</CardTitle
+            >
+          </CardHeader>
+          <CardContent>
+            <CardDescription className="text-lg leading-relaxed">
+              I'm a US based software developer with over 5 years of experience.
+              Coding is a hobby of mine and I enjoy learning new tools to keep
+              sharp. I'm currently working on a few projects and am always
+              looking for new opportunities.
+            </CardDescription>
+          </CardContent>
+          <CardFooter className="flex justify-end items-center">
+            <div class="flex flex-col gap-8">
+              <ContactButtons />
+            </div>
+          </CardFooter>
+        </Card>
+        <Card
+          className="hidden lg:inline lg:w-1/2 lg:h-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+        >
+          <CardHeader
+            ><CardDescription
+              >Interests & Skills. Hover for description.</CardDescription
+            ></CardHeader
+          >
+          <CardContent>
+            <SkillList />
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+
+    <!-- Project Buttons -->
+    <div class="mt-16">
+      <h2
+        class="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text"
+      >
+        Demo Projects
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <a href="#dashboard" class="group">
+          <Card
+            className="h-64 flex flex-col items-center justify-center text-center p-6 transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2"
+          >
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold">Dashboard</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p class="text-gray-600 dark:text-gray-300">
+                An interactive analytics dashboard showcasing data visualization
+                skills.
+              </p>
+            </CardContent>
+          </Card>
+        </a>
+        <a href="#ecommerce" class="group">
+          <Card
+            className="h-64 flex flex-col items-center justify-center text-center p-6 transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2"
+          >
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold">E-Commerce</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p class="text-gray-600 dark:text-gray-300">
+                A sleek and responsive e-commerce platform with modern features.
+              </p>
+            </CardContent>
+          </Card>
+        </a>
+        <a href="#blog" class="group">
+          <Card
+            className="h-64 flex flex-col items-center justify-center text-center p-6 transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2"
+          >
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold">Blog</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p class="text-gray-600 dark:text-gray-300">
+                A content-rich blog showcasing writing and content management
+                abilities.
+              </p>
+            </CardContent>
+          </Card>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

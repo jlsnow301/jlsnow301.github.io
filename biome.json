@@ -1,0 +1,80 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.3/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true,
+    "defaultBranch": "main"
+  },
+  "files": {
+    "ignoreUnknown": false,
+    "ignore": ["docs", "node_modules", ".astro", "public"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "formatWithErrors": false
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "correctness": {
+        "noUnusedImports": "warn",
+        "noUnusedVariables": "warn",
+        "useExhaustiveDependencies": "off"
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "options": {},
+          "level": "warn",
+          "fix": "safe"
+        }
+      },
+      "recommended": true,
+      "style": {
+        "noNonNullAssertion": "warn",
+        "useSelfClosingElements": {
+          "level": "warn",
+          "fix": "safe"
+        },
+        "noUnusedTemplateLiteral": {
+          "level": "warn",
+          "fix": "safe"
+        }
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "warn"
+      },
+      "suspicious": {
+        "noExplicitAny": "warn",
+        "noArrayIndexKey": "warn"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double",
+      "indentStyle": "space"
+    }
+  },
+  "overrides": [
+    {
+      "include": ["*.astro"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUnusedImports": "off",
+            "noUnusedVariables": "off"
+          },
+          "style": {
+            "useConst": "off",
+            "useImportType": "off"
+          }
+        }
+      }
+    }
+  ]
+}

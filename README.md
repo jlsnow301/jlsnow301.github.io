@@ -1,5 +1,5 @@
-# Simple portfolio page
+# Simple portfolio website
 
 Let's see Jeremiah's business card.
 
-Built with Astro and TailwindCSS.
+Built with Astro, React, Shadcn, and TailwindCSS.

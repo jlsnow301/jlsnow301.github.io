@@ -1,70 +1,61 @@
 ---
-import Avatar from "../components/Avatar.astro";
-import Card from "../components/Card.astro";
-import Header from "../components/Header.astro";
-import Link from "../components/Link.astro";
-import Section from "../components/Section.astro";
-import SkillList from "../components/SkillList.astro";
-import Stars from "../components/Stars.astro";
-import ThemeToggle from "../components/ThemeToggle.astro";
-import Layout from "../layouts/Layout.astro";
+import Blog from "@/components/sections/Blog.astro";
+import Dashboard from "@/components/sections/Dashboard.astro";
+import Ecommerce from "@/components/sections/Ecommerce.astro";
+import Intro from "@/components/sections/Intro.astro";
+import { Separator } from "@/components/ui/separator";
+import Layout from "@/layouts/Layout.astro";
 ---
 
-<Layout>
-  <main class="flex flex-col flex-1">
-    <Header>
-      <Avatar />
-      <ThemeToggle />
-    </Header>
-
-    <div class="flex p-12 lg:flex-row flex-col gap-8 justify-around m-auto">
-      <Card title="About">
-        <p class="text-lg font-light">
-          Hey there. I'm Jeremiah, or jlsnow301.
-          <br />
-          I'm full stack, game dev hobbyist, and maintainer @ TG <Stars />
-          <br /><br />
-          I'm a proponent of TypeScript. I enjoy teaching React. I enjoy simplicity
-          in UI design and software architecture.
-        </p>
-        <div class="hidden lg:block">
-          <span class="text-xs text-zinc-500">Hover for skill details.</span>
-          <SkillList />
-        </div>
-      </Card>
-
-      <div class="flex flex-col gap-4 items-center">
-        <div class="hidden md:block">
-          <Section title="Resume">
-            <Link
-              download="resume_jeremiah_snow.pdf"
-              to="/resume_jeremiah_snow.pdf"
-              icon="heroicons:document-arrow-down">PDF</Link
-            >
-          </Section>
-        </div>
-
-        <Section title="Projects">
-          <Link
-            to="https://github.com/tgstation/tgstation/pulls?q=is%3Apr+author%3Ajlsnow301+is%3Amerged"
-          >
-            TG Station
-          </Link>
-          <Link to="https://paretocyber.com/">Pareto Cyber</Link>
-          <Link to="https://github.com/jlsnow301/ambient-noise"
-            >Ambient Noise</Link
-          >
-        </Section>
-
-        <Section title="Contact">
-          <Link icon="mdi:linkedin" to="https://www.linkedin.com/in/jlsnow301/"
-            >LinkedIn</Link
-          >
-          <Link icon="mdi:github" to="https://www.github.com/jlsnow301/"
-            >GitHub</Link
-          >
-        </Section>
-      </div>
-    </div>
-  </main>
+<Layout title="Portfolio - jlsnow301">
+  <Intro />
+  <Separator />
+  <Dashboard />
+  <Separator />
+  <Ecommerce />
+  <Separator />
+  <Blog />
 </Layout>
+
+<script>
+  const userMenuButton = document.getElementById(
+    "user-menu-button"
+  ) as HTMLButtonElement;
+  const userMenu = document.getElementById("user-menu") as HTMLElement;
+
+  userMenuButton.addEventListener("click", () => {
+    const expanded =
+      userMenuButton.getAttribute("aria-expanded") === "true" || false;
+    userMenuButton.setAttribute("aria-expanded", !expanded ? "true" : "false");
+    userMenu.classList.toggle("hidden");
+  });
+
+  // Close the menu when clicking outside
+  document.addEventListener("click", (event) => {
+    if (
+      !userMenuButton.contains(event.target as Node) &&
+      !userMenu.contains(event.target as Node)
+    ) {
+      userMenu.classList.add("hidden");
+      userMenuButton.setAttribute("aria-expanded", "false");
+    }
+  });
+</script>
+
+<style>
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+</style>
