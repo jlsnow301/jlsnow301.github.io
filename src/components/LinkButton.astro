@@ -4,14 +4,19 @@ import { clsx } from "clsx";
 
 type Props = {
   href: string;
-  className?: string;
-  square?: true;
-};
+} & Partial<{
+  className: string;
+  newWindow: true;
+}>;
 
-const { className, href } = Astro.props;
+const { className, href, newWindow } = Astro.props;
 ---
 
-<a href={href} target="_blank" rel="noopener noreferrer">
+<a
+  href={href}
+  target={newWindow ? "_blank" : "_self"}
+  rel="noopener noreferrer"
+>
   <Button
     className={clsx(
       "w-36 bg-blue-500 dark:bg-neutral-700 text-white dark:text-gray-200 hover:bg-blue-600 dark:hover:bg-neutral-600",

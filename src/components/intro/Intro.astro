@@ -1,5 +1,6 @@
 ---
 import { ThemeToggle } from "@/components/theme-toggle";
+import { MyAvatar } from "@/components/my-avatar";
 import {
   Card,
   CardContent,
@@ -8,23 +9,14 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import SkillList from "../SkillList.astro";
-import ContactButtons from "../ContactButtons.astro";
+import ContactButtons from "./ContactButtons.astro";
+import SkillList from "./SkillList.astro";
 ---
 
-<div class="min-h-screen" id="intro">
-  <!-- Hero Section -->
-  <div
-    class="relative h-[25vh] bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"
-  >
-    <div class="absolute inset-0 bg-black opacity-50"></div>
-    <div class="absolute inset-0 flex items-center justify-center">
-      <h1 class="text-4xl md:text-6xl font-bold text-white tracking-wider">
-        Welcome to My Portfolio
-      </h1>
-    </div>
-  </div>
-
+<div
+  class="min-h-screen dark:bg-gradient-to-tr dark:from-neutral-950 dark:to-rose-800/20"
+  id="intro"
+>
   <!-- Main Content -->
   <div class="container mx-auto px-4 py-16">
     <!-- Theme Toggle -->
@@ -38,14 +30,18 @@ import ContactButtons from "../ContactButtons.astro";
     >
       <div class="flex gap-8 items-center h-[260px]">
         <Card
-          className="w-full md:w-2/3 lg:w-1/2 shadow-lg hover:shadow-xl transition-shadow duration-300"
+          className="w-full md:w-2/3 lg:w-1/2 shadow-lg hover:shadow-xl transition-shadow duration-300 dark:shadow-xl dark:shadow-rose-950"
         >
           <CardHeader>
-            <CardTitle
-              className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text"
-              >About Me</CardTitle
-            >
-          </CardHeader>
+            <CardTitle className="flex gap-4">
+              <MyAvatar pixels client:load />
+              <div
+                class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 dark:from-rose-400 dark:to-rose-500 text-transparent bg-clip-text"
+              >
+                About Me
+              </div>
+            </CardTitle></CardHeader
+          >
           <CardContent>
             <CardDescription className="text-lg leading-relaxed">
               I'm a US based software developer with over 5 years of experience.
@@ -61,7 +57,7 @@ import ContactButtons from "../ContactButtons.astro";
           </CardFooter>
         </Card>
         <Card
-          className="hidden lg:inline lg:w-1/2 lg:h-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+          className="hidden lg:inline lg:w-1/2 lg:h-full shadow-lg hover:shadow-xl transition-shadow duration-300  dark:shadow-xl dark:shadow-rose-950"
         >
           <CardHeader
             ><CardDescription
@@ -78,7 +74,7 @@ import ContactButtons from "../ContactButtons.astro";
     <!-- Project Buttons -->
     <div class="mt-16">
       <h2
-        class="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text"
+        class="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text dark:from-gray-100 dark:to-white"
       >
         Demo Projects
       </h2>
@@ -131,3 +127,21 @@ import ContactButtons from "../ContactButtons.astro";
     </div>
   </div>
 </div>
+
+<style>
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+</style>

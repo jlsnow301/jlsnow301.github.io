@@ -1,8 +1,8 @@
 ---
-import Blog from "@/components/sections/Blog.astro";
-import Dashboard from "@/components/sections/Dashboard.astro";
-import Ecommerce from "@/components/sections/Ecommerce.astro";
-import Intro from "@/components/sections/Intro.astro";
+import Blog from "@/components/blog/Blog.astro";
+import Dashboard from "@/components/dashboard/Dashboard.astro";
+import Ecommerce from "@/components/ecommerce/Ecommerce.astro";
+import Intro from "@/components/intro/Intro.astro";
 import { Separator } from "@/components/ui/separator";
 import Layout from "@/layouts/Layout.astro";
 ---
@@ -19,7 +19,7 @@ import Layout from "@/layouts/Layout.astro";
 
 <script>
   const userMenuButton = document.getElementById(
-    "user-menu-button"
+    "user-menu-button",
   ) as HTMLButtonElement;
   const userMenu = document.getElementById("user-menu") as HTMLElement;
 
@@ -41,21 +41,3 @@ import Layout from "@/layouts/Layout.astro";
     }
   });
 </script>
-
-<style>
-  @keyframes float {
-    0% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-  }
-
-  .animate-float {
-    animation: float 3s ease-in-out infinite;
-  }
-</style>

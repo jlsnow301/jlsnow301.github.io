@@ -8,7 +8,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": ["docs", "node_modules", ".astro", "public"]
+    "ignore": []
   },
   "formatter": {
     "enabled": true,

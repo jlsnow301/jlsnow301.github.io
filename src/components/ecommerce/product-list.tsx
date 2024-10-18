@@ -48,7 +48,12 @@ export function ProductList() {
             </p>
           </CardContent>
           <CardFooter className="justify-between">
-            <Button onClick={() => addToCart(product)}>Add to Cart</Button>
+            <Button
+              className="bg-gradient-to-r from-amber-500 to-pink-500 text-white hover:from-amber-600 hover:to-pink-600 dark:from-amber-400 dark:to-pink-400 dark:text-neutral-900 dark:hover:from-amber-300 dark:hover:to-pink-300"
+              onClick={() => addToCart(product)}
+            >
+              Add to Cart
+            </Button>
             {cartMap[product.id] > 0 && (
               <span className="text-sm">{cartMap[product.id]} in cart</span>
             )}

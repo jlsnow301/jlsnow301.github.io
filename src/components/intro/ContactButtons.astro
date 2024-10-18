@@ -1,19 +1,21 @@
 ---
 import { FileTextIcon } from "lucide-react";
-import LinkButton from "./LinkButton.astro";
+import LinkButton from "../LinkButton.astro";
 ---
 
 <div class="flex gap-4">
   <LinkButton
     href="/resume_jlsnow301.pdf"
-    className="hidden lg:flex items-center gap-2 "
+    className="hidden lg:flex items-center gap-2"
+    newWindow
   >
     <FileTextIcon size={20} />
     Resume
   </LinkButton>
   <LinkButton
     href="https://github.com/jlsnow301"
-    className="flex items-center gap-2 "
+    className="flex items-center gap-2"
+    newWindow
   >
     <svg
       role="img"
@@ -30,7 +32,8 @@ import LinkButton from "./LinkButton.astro";
   </LinkButton>
   <LinkButton
     href="https://www.linkedin.com/in/jlsnow301/"
-    className="flex items-center gap-2 "
+    className="flex items-center gap-2"
+    newWindow
   >
     <svg
       role="img"
