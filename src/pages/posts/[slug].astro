@@ -45,7 +45,7 @@ const post = posts[slug as keyof typeof posts];
       <p class="text-gray-600 dark:text-gray-400 mt-4">{post.content}</p>
     </article>
     <div class="mt-8 text-center">
-      <ThemeToggle client:load rectangle />
+      <ThemeToggle client:only="react" rectangle />
       <LinkButton href="/#blog">Back to Home</LinkButton>
     </div>
   </main>

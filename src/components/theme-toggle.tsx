@@ -6,13 +6,9 @@ type Props = {
 };
 
 export function ThemeToggle(props: Props) {
-  if (typeof window === "undefined") {
-    return null;
-  }
-
   const { rectangle } = props;
 
-  const [theme, setTheme] = useState(localStorage?.getItem("theme") ?? "dark");
+  const [theme, setTheme] = useState("light");
 
   function handleClick() {
     setTheme(theme === "light" ? "dark" : "light");
@@ -26,7 +22,15 @@ export function ThemeToggle(props: Props) {
     }
 
     localStorage.setItem("theme", theme);
-  });
+  }, [theme]);
+
+  useEffect(() => {
+    const localTheme = localStorage.getItem("theme");
+    if (localTheme) {
+      setTheme(localTheme);
+    }
+  }, []);
+
 
   const themeIcon = theme === "light" ? "🌙" : "🌞";
 
