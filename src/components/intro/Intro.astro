@@ -18,19 +18,17 @@ import SkillList from "./SkillList.astro";
   id="intro"
 >
   <!-- Main Content -->
-  <div class="container mx-auto px-4 py-16">
+  <div class="container mx-auto px-4 py-16 flex flex-col gap-8">
     <!-- Theme Toggle -->
-    <div class="flex justify-start mb-8 lg:justify-end lg:mb-4">
+    <div class="flex lg:justify-end">
       <ThemeToggle rectangle client:only="react" />
     </div>
 
     <!-- About Me Section -->
-    <div
-      class="flex flex-col md:flex-row gap-8 items-center justify-center mb-16"
-    >
-      <div class="flex gap-8 items-center h-[260px]">
+    <div class="flex flex-col md:flex-row gap-8 items-center justify-center">
+      <div class="flex gap-8 items-center h-full md:h-[280px]">
         <Card
-          className="w-full md:w-2/3 lg:w-1/2 shadow-lg hover:shadow-xl transition-shadow duration-300 dark:shadow-xl dark:shadow-rose-950"
+          className="w-full h-full lg:w-1/2 shadow-lg hover:shadow-xl transition-shadow duration-300 dark:shadow-xl dark:shadow-rose-950"
         >
           <CardHeader>
             <CardTitle className="flex gap-4">
@@ -57,7 +55,7 @@ import SkillList from "./SkillList.astro";
           </CardFooter>
         </Card>
         <Card
-          className="hidden lg:inline lg:w-1/2 lg:h-full shadow-lg hover:shadow-xl transition-shadow duration-300  dark:shadow-xl dark:shadow-rose-950"
+          className="hidden h-full lg:block lg:w-1/2 shadow-lg hover:shadow-xl transition-shadow duration-300  dark:shadow-xl dark:shadow-rose-950"
         >
           <CardHeader
             ><CardDescription
@@ -72,7 +70,7 @@ import SkillList from "./SkillList.astro";
     </div>
 
     <!-- Project Buttons -->
-    <div class="mt-16">
+    <div class="hidden md:flex flex-col mt-16">
       <h2
         class="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text dark:from-gray-100 dark:to-white"
       >

@@ -170,3 +170,28 @@ import {
     </div>
   </main>
 </div>
+
+<script>
+  const userMenuButton = document.getElementById(
+    "user-menu-button",
+  ) as HTMLButtonElement;
+  const userMenu = document.getElementById("user-menu") as HTMLElement;
+
+  userMenuButton.addEventListener("click", () => {
+    const expanded =
+      userMenuButton.getAttribute("aria-expanded") === "true" || false;
+    userMenuButton.setAttribute("aria-expanded", !expanded ? "true" : "false");
+    userMenu.classList.toggle("hidden");
+  });
+
+  // Close the menu when clicking outside
+  document.addEventListener("click", (event) => {
+    if (
+      !userMenuButton.contains(event.target as Node) &&
+      !userMenu.contains(event.target as Node)
+    ) {
+      userMenu.classList.add("hidden");
+      userMenuButton.setAttribute("aria-expanded", "false");
+    }
+  });
+</script>
