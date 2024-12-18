@@ -17,6 +17,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ShoppingCart } from "lucide-react";
 import { MyAvatar } from "../my-avatar";
 import { ThemeToggle } from "../theme-toggle";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../ui/tooltip";
 import { useProductStore } from "./store";
 
 function ShoppingCartContent() {
@@ -71,6 +77,39 @@ function ShoppingCartContent() {
         </>
       )}
     </div>
+  );
+}
+
+function CartButton() {
+  const cart = useProductStore((state) => state.cart);
+
+  if (cart.length === 0) {
+    return (
+      <Button variant="outline" size="icon">
+        <ShoppingCart className="h-4 w-4" />
+      </Button>
+    );
+  }
+
+  return (
+    <TooltipProvider delayDuration={300}>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <Button
+            variant="outline"
+            size="icon"
+            className="border-none bg-gradient-to-r from-amber-500 to-pink-500"
+          >
+            <div className="transitions-colors rounded-md bg-white text-amber-600 dark:bg-neutral-900 dark:text-pink-500 dark:hover:bg-neutral-800 dark:hover:text-amber-200">
+              <div className="flex h-8 w-8 items-center justify-center">
+                <ShoppingCart className="h-4 w-4" />
+              </div>
+            </div>
+          </Button>
+        </TooltipTrigger>
+        <TooltipContent>{cart.length} items in cart</TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
   );
 }
 
@@ -190,9 +229,12 @@ export function TopBar() {
         </Button>
         <Popover>
           <PopoverTrigger asChild>
-            <Button variant="outline" size="icon">
-              <ShoppingCart className="h-4 w-4" />
-            </Button>
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <CartButton />
+            </motion.div>
           </PopoverTrigger>
           <PopoverContent className="mr-4 w-80">
             <ShoppingCartContent />
