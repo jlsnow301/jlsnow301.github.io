@@ -1,11 +1,13 @@
-# build output
-dist/
+# local dependencies
+node_modules/
 
-# generated types
+# astro build output
+dist/
 .astro/
 
-# dependencies
-node_modules/
+# local agent skill files
+.agents/
+skills-lock.json
 
 # logs
 npm-debug.log*

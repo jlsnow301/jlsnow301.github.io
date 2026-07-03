@@ -1,15 +1,9 @@
 {
-	"[typescript][typescriptreact][javascript][javascriptreact][json][jsonc][graphql][css]": {
-		"editor.defaultFormatter": "biomejs.biome"
-	},
-	"[astro]": {
-		"editor.defaultFormatter": "astro-build.astro-vscode"
-	},
-	"[html][yaml][markdown]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"editor.codeActionsOnSave": {
-		"source.fixAll.biome": "always",
-		"source.organizeImports.biome": "always"
-	}
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "[html][css][markdown][yaml]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+  "deno.enable": false
 }

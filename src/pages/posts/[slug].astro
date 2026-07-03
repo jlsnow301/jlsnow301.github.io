@@ -1,52 +1,57 @@
 ---
-import LinkButton from "@/components/LinkButton.astro";
-import { ThemeToggle } from "@/components/theme-toggle";
-import Layout from "@/layouts/Layout.astro";
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import ShellLayout from "../../layouts/ShellLayout.astro";
+import { formatDate, postTag, sortPosts } from "../../lib/posts";
 
-export function getStaticPaths() {
-  return [
-    { params: { slug: "reflections-on-5" } },
-    { params: { slug: "ask-stupidly" } },
-    { params: { slug: "state-of-ai" } },
-  ];
+export async function getStaticPaths() {
+  const posts = sortPosts(await getCollection("blog"));
+
+  return posts.map((post) => {
+    return {
+      params: { slug: post.id },
+      props: { post }
+    };
+  });
 }
 
-const { slug } = Astro.params;
+type Props = {
+  post: CollectionEntry<"blog">;
+};
 
-const posts = {
-  "reflections-on-5": {
-    title: "Reflections on 5 years in software",
-    content:
-      "Over the past five years, I've learned that experience is invaluable in the software industry. While working at various companies, I've seen how different paths can lead to success. It's important to recognize the value of diverse experiences, whether gained at large corporations or through independent projects. I've had the opportunity to work with a range of managers and colleagues, each bringing unique perspectives and skills to the table. What stands out to me is the importance of continuous learning and adaptability. Building projects independently and tackling challenges without a predefined roadmap have been some of the most rewarding experiences (let's call it 'experimental coding'). These opportunities have allowed me to grow as a developer and demonstrate my problem-solving abilities.",
-    date: "2023-05-15",
-  },
-  "ask-stupidly": {
-    title: "Don't fear asking stupid questions",
-    content:
-      "It's important to keep our ego in check to continue learning and growing. Sometimes, we hesitate to ask questions out of fear that it might reveal our lack of knowledge. In the software industry, 'imposter syndrome' is a common experience due to the complexity of the work. While it can be challenging, imposter syndrome can also be a positive force. Surround yourself with skilled peers who inspire you, and imposter syndrome becomes a frequent guest in the room. However, this is often where our skills grow the most.",
-    date: "2023-06-01",
-  },
-  "state-of-ai": {
-    title: "On the Coming AI Revolution",
-    content:
-      "The rise of AI is opening up a world of incredible possibilities for the software industry. Yes, AI will change the way we work, but it won't replace the need for human talent and creativity. Developers will still be essential, adapting to new tools and methods. AI can help by taking over repetitive tasks and generating code, giving us more time to tackle complex and innovative problems. As we bring AI into our workflows, let's remember that human insight and creativity are irreplaceable.",
-    date: "2023-06-15",
-  },
-} as const;
-
-const post = posts[slug as keyof typeof posts];
+const { post } = Astro.props;
+const { Content } = await render(post);
 ---
 
-<Layout title={post.title}>
-  <main class="container mx-auto px-4 py-8">
-    <article class="prose lg:prose-xl mx-auto">
-      <h1 class="text-2xl text-gray-900 dark:text-gray-200">{post.title}</h1>
-      <p class="text-gray-500">{post.date}</p>
-      <p class="text-gray-600 dark:text-gray-400 mt-4">{post.content}</p>
-    </article>
-    <div class="mt-8 text-center">
-      <ThemeToggle client:only="react" rectangle />
-      <LinkButton href="/#blog">Back to Home</LinkButton>
+<ShellLayout
+  title={`Jeremiah Snow // ${post.data.title}`}
+  description={post.data.description}
+  navLabel="writing"
+  crumb="writing"
+>
+  <div class="page-section">
+    <div class="prompt">
+      <span>jeremiah@station:~$</span>
+      <span class="cmd">cat {post.id}.md</span>
+      <span class="cursor" aria-hidden="true"></span>
     </div>
-  </main>
-</Layout>
+
+    <article class="article-shell">
+      <header class="article-header">
+        <span class="post-tag">{postTag(post)}</span>
+        <h1>{post.data.title}</h1>
+        <p class="article-summary">{post.data.description}</p>
+        <div class="article-meta">
+          <span>{formatDate(post.data.date)}</span>
+        </div>
+      </header>
+
+      <div class="article-body">
+        <Content />
+      </div>
+    </article>
+
+    <div class="article-actions">
+      <a class="back-link" href="/posts/">← back to writing</a>
+    </div>
+  </div>
+</ShellLayout>

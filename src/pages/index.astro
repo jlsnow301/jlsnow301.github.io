@@ -1,20 +1,112 @@
 ---
-import Blog from "@/components/blog/Blog.astro";
-import Dashboard from "@/components/dashboard/Dashboard.astro";
-import Ecommerce from "@/components/ecommerce/Ecommerce.astro";
-import Intro from "@/components/intro/Intro.astro";
-import { Separator } from "@/components/ui/separator";
-import Layout from "@/layouts/Layout.astro";
+import ShellLayout from "../layouts/ShellLayout.astro";
+
+const stack = [
+  "Rust",
+  "Go",
+  "Python",
+  "TypeScript",
+  "React",
+  "Tailwind",
+  "Sass",
+  "Node.js",
+  "Next.js",
+  "Deno",
+  "Prisma",
+  "Astro",
+  "Webpack",
+  "PostgreSQL",
+  "Docker",
+  "Supabase",
+  "AWS",
+  "Azure",
+  "GitHub",
+  "Linux",
+  "CI/CD",
+  "E2E Testing",
+  "Agentic",
+  "Context Engineering",
+  "AI Harnessing"
+];
 ---
 
-<Layout title="Portfolio - jlsnow301">
-  <Intro />
-  <div class="hidden md:inline">
-    <Separator />
-    <Dashboard />
-    <Separator />
-    <Ecommerce />
-    <Separator />
-    <Blog />
+<ShellLayout
+  title="Jeremiah Snow"
+  description="Jeremiah Snow builds software, writes about learning, and keeps things readable."
+  navLabel="index"
+  crumb="index"
+>
+  <div class="page-section">
+    <div class="prompt">
+      <span>jeremiah@station:~$</span>
+      <span class="cmd">cat index.txt</span>
+      <span class="cursor" aria-hidden="true"></span>
+    </div>
+
+    <p class="bio">
+      Seattle-based software developer. Writing code since 2019. Enjoys simple, scalable
+      software designed to be read by <b>people</b>. Open source advocate and maintainer.
+    </p>
+
+    <div class="block-label">// stack</div>
+    <div class="chips">
+      {
+        stack.map((item) => (
+          <span class="chip" data-stack-chip data-stack-value={item.toLowerCase()}>
+            {item}
+          </span>
+        ))
+      }
+    </div>
+    <div class="stack-filter">
+      <label class="stack-filter-label" for="stack-filter">filter stack</label>
+      <input
+        class="stack-filter-input"
+        id="stack-filter"
+        name="stack-filter"
+        type="search"
+        placeholder="search tools..."
+        autocomplete="off"
+        spellcheck="false"
+        data-stack-filter
+      />
+    </div>
   </div>
-</Layout>
+
+  <script>
+    const filterInput = document.querySelector("[data-stack-filter]");
+    const chips = Array.from(document.querySelectorAll("[data-stack-chip]"));
+
+    if (filterInput instanceof HTMLInputElement) {
+      const applyFilter = () => {
+        const query = filterInput.value.trim().toLowerCase();
+        const matches = chips.filter((chip) => {
+          return chip instanceof HTMLElement && (chip.dataset.stackValue || "").includes(query);
+        });
+
+        chips.forEach((chip) => {
+          if (!(chip instanceof HTMLElement)) {
+            return;
+          }
+
+          chip.classList.remove("chip-match", "chip-dim", "chip-solo");
+
+          if (!query) {
+            return;
+          }
+
+          const isMatch = matches.includes(chip);
+          chip.classList.add(isMatch ? "chip-match" : "chip-dim");
+
+          if (matches.length === 1 && isMatch) {
+            chip.classList.remove("chip-match");
+            chip.classList.add("chip-solo");
+          }
+        });
+      };
+
+      filterInput.addEventListener("input", applyFilter);
+      applyFilter();
+    }
+  </script>
+</ShellLayout>

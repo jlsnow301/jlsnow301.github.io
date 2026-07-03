@@ -1,0 +1,8 @@
+{
+  "fmt": {
+    "useTabs": false,
+    "lineWidth": 80,
+    "indentWidth": 2,
+    "include": ["**/*.html", "**/*.css", "**/*.md", "**/*.yaml", "**/*.yml"]
+  }
+}

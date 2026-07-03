@@ -1,0 +1,41 @@
+---
+import { getCollection } from "astro:content";
+import ShellLayout from "../../layouts/ShellLayout.astro";
+import { formatDate, postHref, postTag, sortPosts } from "../../lib/posts";
+
+const posts = sortPosts(await getCollection("blog"));
+---
+
+<ShellLayout
+  title="Jeremiah Snow // Writing"
+  description="Posts on software, learning, and building things that last."
+  navLabel="writing"
+  crumb="writing"
+>
+  <div class="page-section">
+    <div class="prompt">
+      <span>jeremiah@station:~$</span>
+      <span class="cmd">ls writing/</span>
+      <span class="cursor" aria-hidden="true"></span>
+    </div>
+
+    <p class="bio">
+        Notes on software, learning, and sometimes just yelling into the void.
+    </p>
+
+    <div class="block-label">// posts</div>
+    <div class="post-list">
+      {
+        posts.map((post) => (
+          <a href={postHref(post.id)} class="post-item">
+            <div class="post-title">{post.data.title}</div>
+            <div class="post-meta">
+              <span class="tag">{postTag(post)}</span>{formatDate(post.data.date)}
+            </div>
+            <p class="post-summary">{post.data.description}</p>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</ShellLayout>
