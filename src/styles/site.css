@@ -11,7 +11,7 @@
   --accent-amber: oklch(72% 0.16 68);
   --text-primary: oklch(88% 0.04 250);
   --text-secondary: oklch(62% 0.06 250);
-  --text-muted: oklch(40% 0.04 250);
+  --text-muted: oklch(50% 0.04 250);
   --sidebar-w: 250px;
   --font: "Share Tech Mono", "Courier New", monospace;
 }
@@ -36,6 +36,11 @@ body {
   min-height: 100vh;
 }
 
+@keyframes scanline {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(4px); }
+}
+
 body::after {
   content: "";
   position: fixed;
@@ -49,6 +54,7 @@ body::after {
   );
   pointer-events: none;
   z-index: 9999;
+  animation: scanline 5s linear infinite;
 }
 
 a {
@@ -291,7 +297,9 @@ select {
 
 .bio a:hover,
 .back-link:hover {
-  text-decoration: underline;
+  background: var(--accent-cyan);
+  color: var(--void);
+  text-decoration: none;
 }
 
 .chips {
@@ -357,11 +365,6 @@ select {
   border-color: var(--edge-primary);
 }
 
-.post-list,
-.article-actions {
-  display: flex;
-  flex-direction: column;
-}
 
 .project-name,
 .post-title,
@@ -371,16 +374,10 @@ select {
 }
 
 .post-title {
- transition: color 0.15s;
+  font-size: 0.98rem;
+  transition: color 0.15s;
 }
 
-.post-title {
- font-size: 0.98rem;
-}
-
-.post-item:first-child {
- border-top: 1px solid var(--edge-subtle);
-}
 
 .page-section {
   width: 100%;
@@ -510,7 +507,8 @@ select {
 .article-body pre {
   overflow-x: auto;
   border: 1px solid var(--edge-subtle);
-  background: var(--void);
+  border-left: 2px solid var(--accent-amber);
+  background: var(--surface);
   padding: 1.1rem;
 }
 
